@@ -9,22 +9,22 @@
 2、中文字体解决方案
 
 ### elements
-1、Button
+1、Button  
 	支持不同状态，不同皮肤样式，内嵌显示图标，内容只有图标
 
-2、Button Group
+2、Button Group  
 	支持多个按钮并排显示
 
-3、Link
+3、Link  
 	链接
 
-4、input
+4、input  
 	输入框
 
-5、image
+5、image  
 	图片显示，支持圆角与非圆角
 
-6、dropdown
+6、dropdown  
 	下来菜单，提供给select组件和dropdown组件使用
 
 7、tab
@@ -40,7 +40,7 @@
 12、notify
 
 ### views
-1、card
+1、card  
 	联系人卡片
 
 2、dialog

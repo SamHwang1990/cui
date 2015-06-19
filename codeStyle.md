@@ -38,7 +38,7 @@
 
 ### 代码格式
 
-**注释风格**
+**注释风格**  
 类似于标签闭合，如：
 
 	<!-- 头部 -->
@@ -63,7 +63,7 @@
 - 可以省略style和script标签中的type属性
 
 
-**语义化**
+**语义化**  
 优先采用HTML5的语义化标签，比如section、article、nav等。IE8下不兼容的浏览器加上以下代码段：
 
 	// 为 IE8 添加 html5 标签
@@ -126,7 +126,7 @@ ES5变量的作用域为整个函数，JS解释器会将所有的变量声明提
 
 
 ## 参考
-http://amazeui.org/getting-started/javascript
-http://nec.netease.com/
-http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
-http://google.github.io/styleguide/javascriptguide.xml
+http://amazeui.org/getting-started/javascript  
+http://nec.netease.com/  
+http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml  
+http://google.github.io/styleguide/javascriptguide.xml  
