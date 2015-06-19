@@ -6,7 +6,8 @@ Coremail 前端组件库
     |- HISTORY.md
     |- README.md
     |- package.json
-    |- docs                 # 自动生成文档在这里
+    |- _docs                # 自动生成CUI的文档在这里，一般为API文档
+    |- docs                 # 额外的文档，这里放置一些其他的说明文档
     |- gulpfile.js          # 打包脚本
     |- dist
     |- src
@@ -20,7 +21,8 @@ Coremail 前端组件库
 
 每个组件的目录结构推荐为：
 
-    |- docs
+    |- docs                         # 额外的文档，这里放置一些其他的说明文档
+    |- _docs                        # 自动生成组件的API文档在这里
     |- style
         |- [plugin].less            # 样式对应的less版本
         |- [plugin].css             # 样式对应的css版本
@@ -28,15 +30,18 @@ Coremail 前端组件库
         |- [plugin]-legacy.css
     |- assets                       # 引用的资源比如图片，字体文件等
     |- script                       # 依赖的脚本实现
-    |- test
+    |- test                         # 测试文件
     |- index.html                   # 应用实例
     |- package.json
     |- API.json                     # 对应的API接口，文档生成工具会解析这里的内容生成文档到docs
 
 
 ## 编码规范
-参见 **style_guide.md**
+参见 **codeStyle.md**
 
+
+## 设计稿
+参见 **docs/CM_XT_V5.0_UI_New.png**
 
 ## 两个原则
 
