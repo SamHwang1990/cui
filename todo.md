@@ -3,10 +3,11 @@
 ## 6月30日止
 
 ### globals
-1、栅格
+1、栅格（by zyhuang）
+
 支持两种方式，一种不依赖box-sizing为border-box，一种依赖border-box
 
-2、中文字体解决方案
+2、中文字体解决方案（by zyhuang）
 
 ### elements
 1、Button  
