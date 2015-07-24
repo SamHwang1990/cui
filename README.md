@@ -6,17 +6,23 @@ Coremail 前端组件库
     |- HISTORY.md
     |- README.md
     |- package.json
-    |- _docs                # 自动生成CUI的文档在这里，一般为API文档
-    |- docs                 # 额外的文档，这里放置一些其他的说明文档
-    |- gulpfile.js          # 打包脚本
+    |- _docs                        # 自动生成CUI的文档在这里，一般为API文档
+    |- docs                         # 额外的文档，这里放置一些其他的说明文档
+    |- gulpfile.js                  # 打包脚本
     |- dist
     |- src
-        |- assets           # 全局资源，包括字体等
-        |- globals          # 全局解决方案，包括样式重设等
-        |- elements         # 基础样式文件，无需脚本控制行为
-        |- views            # 组合的组件视图，比如联系人卡片
-        |- utils            # 工具类
-        |- widgets          # 组件，通常包含样式、模板和脚本
+		|- definitions
+            |- assets               # 全局资源，包括字体等
+            |- globals              # 全局解决方案，包括样式重设等
+            |- elements             # 基础样式文件，无需脚本控制行为
+            |- views                # 组合的组件视图，比如联系人卡片
+            |- utils                # 工具类
+            |- widgets              # 组件，通常包含样式、模板和脚本
+        |- themes
+            |- default              # 默认主题
+        |- cui.less                 # 引入所需less
+        |- themes.config            # 配置各组件的主题
+        |- themes.less
 
 
 每个组件的目录结构推荐为：
