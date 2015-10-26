@@ -1,6 +1,6 @@
 # CUI推进计划
 
-## Bundle & Build
+## Bundle & Build & Install
 Write gulp tasks to bundle and build definitions and themes to dist directory.
 
 ### Principles
