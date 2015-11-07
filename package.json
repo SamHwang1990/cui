@@ -1,0 +1,32 @@
+{
+  "name": "cui",
+  "version": "0.0.1",
+  "description": "cui, a set of ui for coremail frontend",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamHwang1990/cui.git"
+  },
+  "keywords": [
+    "ui",
+    "stylus",
+    "semantic",
+    "ie8"
+  ],
+  "author": "Sam Hwang <samhwang1990@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamHwang1990/cui/issues"
+  },
+  "homepage": "https://github.com/SamHwang1990/cui#readme",
+  "dependencies": {
+    "stylus": "^0.52.4"
+  }
+}

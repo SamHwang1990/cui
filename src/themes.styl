@@ -1,6 +1,7 @@
 /*******************************
         Import Directives
 *******************************/
+use('./helpers/file-exist.js')
 
 theme = element;
 
@@ -9,16 +10,17 @@ theme = element;
    Site Variables
 ---------------------*/
 
-@import "*()"
-
 /* Default */
-@import "@{themesFolder}/default/globals/site.variables";
+defaultGlobalSiteVariable = themesFolder ＋ '/default/globals/site.variables.styl'
+@import defaultGlobalSiteVariable if file-exists(defaultGlobalSiteVariable)
 
 /* Packaged Theme */
-@import (optional) "@{themesFolder}/@{site}/globals/site.variables";
+themeGlobalSiteVariable = themesFolder + '/' + site + '/globals/site.variables.styl'
+@import themeGlobalSiteVariable if file-exists(themeGlobalSiteVariable)
 
 /* Site Theme */
-@import (optional) "@{siteFolder}/globals/site.variables";
+siteGlobalSiteVariable = siteFolder + '/globals/site.variables.styl'
+@import siteGlobalSiteVariable if file-exists(siteGlobalSiteVariable)
 
 
 /*-------------------
@@ -26,13 +28,16 @@ theme = element;
 ---------------------*/
 
 /* Default */
-@import "@{themesFolder}/default/@{type}s/@{element}.variables";
+defaultComponentVariable = themesFolder + '/default/' + type + 's/' + element + '.variables.styl'
+@import defaultComponentVariable
 
 /* Packaged Theme */
-@import "@{themesFolder}/@{theme}/@{type}s/@{element}.variables";
+themeComponentVariable = themesFolder + '/'+ theme +'/' + type + 's/' + element + '.variables.styl'
+@import themeComponentVariable
 
 /* Site Theme */
-@import (optional) "@{siteFolder}/@{type}s/@{element}.variables";
+siteComponentVariable = siteFolder + '/' + type + 's/' + element + '.variables.styl'
+@import siteComponentVariable if file-exists(siteComponentVariable)
 
 
 /*******************************
@@ -40,18 +45,11 @@ theme = element;
 *******************************/
 
 /*------------------
-       Fonts
--------------------*/
-
-.loadFonts() when (@importGoogleFonts) {
-@import url('@{googleProtocol}fonts.googleapis.com/css?family=@{googleFontRequest}');
-}
-
-/*------------------
      Overrides
 -------------------*/
+themeComponentOverride = themesFolder + '/' + theme + '/' + type + 's/' + element + '.overrides.styl'
+siteComponentOverride = siteFolder + '/' + type + 's/' + element + '.overrides.styl'
 
-.loadUIOverrides() {
-  @import "@{themesFolder}/@{theme}/@{type}s/@{element}.overrides";
-  @import (optional) "@{siteFolder}/@{type}s/@{element}.overrides";
-}
+loadUIOverrides()
+  @import themeComponentOverride
+  @import siteComponentOverride if file-exists(siteComponentOverride)
