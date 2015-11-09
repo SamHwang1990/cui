@@ -21,16 +21,6 @@ textSize = 14px
 
 
 /*-------------------
-    Brand Colors
---------------------*/
-primaryColor           = blue
-primaryLightColor      = lightBlue
-primaryBackgroundColor = blueBackground
-primaryBorderColor     = lightBlue
-primaryHeaderColor     = blueHeaderColor
-primaryTextColor       = blueTextColor
-
-/*-------------------
     Page Heading
 --------------------*/
 headerFontWeight = bold
@@ -43,6 +33,17 @@ h4Size = 16px
 h5Size = 14px
 h6Size = 12px
 
+
+/*-------------------
+    Page
+--------------------*/
+pageBackground      = white
+pageOverflowX       = hidden
+
+lineHeight          = 1.4285em
+textColor           = black
+
+
 /*-------------------
     Form Input
 --------------------*/
@@ -54,17 +55,7 @@ inputHorizontalPadding = relative14px;
 inputPadding           = inputVerticalPadding inputHorizontalPadding;
 
 /* Line Height Default For Inputs in Browser */
-inputLineHeight 1.2142em
-
-
-/*-------------------
-    Page
---------------------*/
-pageBackground      = white
-pageOverflowX       = hidden
-
-lineHeight          = 1.4285em
-textColor           = black
+inputLineHeight = 1.2142em
 
 
 /*-------------------
@@ -81,6 +72,19 @@ linkColor           = #4183C4
 linkUnderline       = none
 linkHoverColor      = darken(saturate(@linkColor, 20), 15);
 linkHoverUnderline  = none
+
+
+/*-------------------
+    Transitions
+--------------------*/
+defaultDuration = 0.1s
+defaultEasing   = ease
+
+/*-------------------
+    Icons
+--------------------*/
+/* Maximum Glyph Width of Icon */
+iconWidth = 1.18em
 
 
 /*-------------------
@@ -114,12 +118,6 @@ tenColumn    = (1 / 10 * 100%)
 elevenColumn = (1 / 11 * 100%)
 twelveColumn = (1 / 12 * 100%)
 
-/*-------------------
-    Transitions
---------------------*/
-defaultDuration = 0.1s
-defaultEasing   = ease
-
 
 /*-------------------
      Breakpoints
@@ -135,6 +133,92 @@ largestTabletScreen = (computerBreakpoint - 1px)
 largestSmallMonitor = (largeMonitorBreakpoint - 1px)
 largestLargeMonitor = (widescreenMonitorBreakpoint - 1px)
 
+/*-------------------
+    Sizes
+--------------------*/
+/*
+  Sizes are all expressed in terms of 14px/em (default em)
+  This ensures these "ratios" remain constant despite changes in EM
+*/
+miniSize    = (12 / 14)
+tinySize    = (13 / 14)
+smallSize   = (14 / 14)
+mediumSize  = (16 / 14)
+largeSize   = (18 / 14)
+bigSize     = (20 / 14)
+hugeSize    = (24 / 14)
+massiveSize = (28 / 14)
+
+/* em */
+relativeMini    = unit( round(miniSize * emSize) / emSize, em)
+relativeTiny    = unit( round(tinySize * emSize) / emSize, em)
+relativeSmall   = unit( round(smallSize * emSize) / emSize, em)
+relativeMedium  = unit( round(mediumSize * emSize) / emSize, em)
+relativeLarge   = unit( round(largeSize * emSize) / emSize, em)
+relativeBig     = unit( round(bigSize * emSize) / emSize, em)
+relativeHuge    = unit( round(hugeSize * emSize) / emSize, em)
+relativeMassive = unit( round(massiveSize * emSize) / emSize, em)
+
+/* px */
+absoluteMini    = unit( round(@miniSize * @emSize), px)
+absoluteTiny    = unit( round(@tinySize * @emSize), px)
+absoluteSmall   = unit( round(@smallSize * @emSize), px)
+absoluteMedium  = unit( round(@mediumSize * @emSize), px)
+absoluteLarge   = unit( round(@largeSize * @emSize), px)
+absoluteBig     = unit( round(@bigSize * @emSize), px)
+absoluteHuge    = unit( round(@hugeSize * @emSize), px)
+absoluteMassive = unit( round(@massiveSize * @emSize), px)
+
+/*
+  exact pixel values
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+absolute1px  = unit( 1, px)
+absolute2px  = unit( 2, px)
+absolute3px  = unit( 3, px)
+absolute4px  = unit( 4, px)
+absolute5px  = unit( 5, px)
+absolute6px  = unit( 6, px)
+absolute7px  = unit( 7, px)
+absolute8px  = unit( 8, px)
+absolute9px  = unit( 9, px)
+absolute10px = unit( 10, px)
+absolute11px = unit( 11, px)
+absolute12px = unit( 12, px)
+absolute13px = unit( 13, px)
+absolute14px = unit( 14, px)
+
+relative1px  = unit( (1 / emSize), em)
+relative2px  = unit( (2 / emSize), em)
+relative3px  = unit( (3 / emSize), em)
+relative4px  = unit( (4 / emSize), em)
+relative5px  = unit( (5 / emSize), em)
+relative6px  = unit( (6 / emSize), em)
+relative7px  = unit( (7 / emSize), em)
+relative8px  = unit( (8 / emSize), em)
+relative9px  = unit( (9 / emSize), em)
+relative10px = unit( (10 / emSize), em)
+relative11px = unit( (11 / emSize), em)
+relative12px = unit( (12 / emSize), em)
+relative13px = unit( (13 / emSize), em)
+relative14px = unit( (14 / emSize), em)
+
+
+/*-------------------
+    Brand Colors
+--------------------*/
+primaryColor           = blue
+primaryLightColor      = lightBlue
+primaryBackgroundColor = blueBackground
+primaryBorderColor     = lightBlue
+primaryHeaderColor     = blueHeaderColor
+primaryTextColor       = blueTextColor
 
 
 /*-------------------
@@ -218,11 +302,6 @@ orangeHeaderColor = darken(orangeTextColor, 5)
 brownHeaderColor  = darken(brownTextColor, 5)
 
 
-
-/*******************************
-           Power-User
-*******************************/
-
 /*-------------------
     Emotive Colors
 --------------------*/
@@ -257,118 +336,28 @@ warningTextColor        = #573A08
 
 
 /*-------------------
-    Paths
---------------------*/
-
-/*-------------------
-    Sizes
---------------------*/
-/*
-  Sizes are all expressed in terms of 14px/em (default em)
-  This ensures these "ratios" remain constant despite changes in EM
-*/
-miniSize    = (12 / 14)
-tinySize    = (13 / 14)
-smallSize   = (14 / 14)
-mediumSize  = (16 / 14)
-largeSize   = (18 / 14)
-bigSize     = (20 / 14)
-hugeSize    = (24 / 14)
-massiveSize = (28 / 14)
-
-/* em */
-relativeMini    = unit( round(miniSize * emSize) / emSize, em)
-relativeTiny    = unit( round(tinySize * emSize) / emSize, em)
-relativeSmall   = unit( round(smallSize * emSize) / emSize, em)
-relativeMedium  = unit( round(mediumSize * emSize) / emSize, em)
-relativeLarge   = unit( round(largeSize * emSize) / emSize, em)
-relativeBig     = unit( round(bigSize * emSize) / emSize, em)
-relativeHuge    = unit( round(hugeSize * emSize) / emSize, em)
-relativeMassive = unit( round(massiveSize * emSize) / emSize, em)
-
-/* px */
-absoluteMini    = unit( round(@miniSize * @emSize), px)
-absoluteTiny    = unit( round(@tinySize * @emSize), px)
-absoluteSmall   = unit( round(@smallSize * @emSize), px)
-absoluteMedium  = unit( round(@mediumSize * @emSize), px)
-absoluteLarge   = unit( round(@largeSize * @emSize), px)
-absoluteBig     = unit( round(@bigSize * @emSize), px)
-absoluteHuge    = unit( round(@hugeSize * @emSize), px)
-absoluteMassive = unit( round(@massiveSize * @emSize), px)
-
-/*
-  exact pixel values
-  These are used to specify exact pixel values in em
-  for things like borders that remain constantly
-  sized as emSize adjusts
-
-  Since there are many more sizes than names for sizes,
-  these are named by their original pixel values.
-
-*/
-absolute1px  = unit( 1, px)
-absolute2px  = unit( 2, px)
-absolute3px  = unit( 3, px)
-absolute4px  = unit( 4, px)
-absolute5px  = unit( 5, px)
-absolute6px  = unit( 6, px)
-absolute7px  = unit( 7, px)
-absolute8px  = unit( 8, px)
-absolute9px  = unit( 9, px)
-absolute10px = unit( 10, px)
-absolute11px = unit( 11, px)
-absolute12px = unit( 12, px)
-absolute13px = unit( 13, px)
-absolute14px = unit( 14, px)
-
-relative1px  = unit( (1 / emSize), em)
-relative2px  = unit( (2 / emSize), em)
-relative3px  = unit( (3 / emSize), em)
-relative4px  = unit( (4 / emSize), em)
-relative5px  = unit( (5 / emSize), em)
-relative6px  = unit( (6 / emSize), em)
-relative7px  = unit( (7 / emSize), em)
-relative8px  = unit( (8 / emSize), em)
-relative9px  = unit( (9 / emSize), em)
-relative10px = unit( (10 / emSize), em)
-relative11px = unit( (11 / emSize), em)
-relative12px = unit( (12 / emSize), em)
-relative13px = unit( (13 / emSize), em)
-relative14px = unit( (14 / emSize), em)
-
-
-
-
-/*-------------------
-    Icons
---------------------*/
-/* Maximum Glyph Width of Icon */
-iconWidth = 1.18em
-
-
-/*-------------------
     Neutral Text
 --------------------*/
 
 /* all the color below shall be rgba format, but because of supporting for ie8, convert to similar rgb format */
-darkTextColor               = lighten(fullBlack, 85%)  //rgba(0, 0, 0, 0.85)
-mutedTextColor              = lighten(fullBlack, 60%)  //rgba(0, 0, 0, 0.6)
-lightTextColor              = lighten(fullBlack, 40%)  //rgba(0, 0, 0, 0.4)
+darkTextColor               = lighten(fullBlack, 85%)  //fallback to rgba(0, 0, 0, 0.85)
+mutedTextColor              = lighten(fullBlack, 60%)  //fallback to rgba(0, 0, 0, 0.6)
+lightTextColor              = lighten(fullBlack, 40%)  //fallback to rgba(0, 0, 0, 0.4)
 
-unselectedTextColor         = lighten(fullBlack, 40%)  //rgba(0, 0, 0, 0.4)
-hoveredTextColor            = lighten(fullBlack, 80%)  //rgba(0, 0, 0, 0.8)
-pressedTextColor            = lighten(fullBlack, 90%)  //rgba(0, 0, 0, 0.9)
-selectedTextColor           = lighten(fullBlack, 95%)  //rgba(0, 0, 0, 0.95)
-disabledTextColor           = lighten(fullBlack, 20%)  //rgba(0, 0, 0, 0.2)
+unselectedTextColor         = lighten(fullBlack, 40%)  //fallback to rgba(0, 0, 0, 0.4)
+hoveredTextColor            = lighten(fullBlack, 80%)  //fallback to rgba(0, 0, 0, 0.8)
+pressedTextColor            = lighten(fullBlack, 90%)  //fallback to rgba(0, 0, 0, 0.9)
+selectedTextColor           = lighten(fullBlack, 95%)  //fallback to rgba(0, 0, 0, 0.95)
+disabledTextColor           = lighten(fullBlack, 20%)  //fallback to rgba(0, 0, 0, 0.2)
 
-invertedTextColor           = darken(white, 10%)       //rgba(255, 255, 255, 0.9)
-invertedMutedTextColor      = darken(white, 20%)       //rgba(255, 255, 255, 0.8)
-invertedLightTextColor      = darken(white, 30%)       //rgba(255, 255, 255, 0.7)
-invertedUnselectedTextColor = darken(white, 50%)       //rgba(255, 255, 255, 0.5)
-invertedHoveredTextColor    = white                    //rgba(255, 255, 255, 1)
-invertedPressedTextColor    = white                    //rgba(255, 255, 255, 1)
-invertedSelectedTextColor   = white                    //rgba(255, 255, 255, 1)
-invertedDisabledTextColor   = darken(white, 80%)       //rgba(255, 255, 255, 0.2)
+invertedTextColor           = darken(white, 10%)       //fallback to rgba(255, 255, 255, 0.9)
+invertedMutedTextColor      = darken(white, 20%)       //fallback to rgba(255, 255, 255, 0.8)
+invertedLightTextColor      = darken(white, 30%)       //fallback to rgba(255, 255, 255, 0.7)
+invertedUnselectedTextColor = darken(white, 50%)       //fallback to rgba(255, 255, 255, 0.5)
+invertedHoveredTextColor    = white                    //fallback to rgba(255, 255, 255, 1)
+invertedPressedTextColor    = white                    //fallback to rgba(255, 255, 255, 1)
+invertedSelectedTextColor   = white                    //fallback to rgba(255, 255, 255, 1)
+invertedDisabledTextColor   = darken(white, 80%)       //fallback to rgba(255, 255, 255, 0.2)
 
 
 /*******************************
