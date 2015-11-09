@@ -1,3 +1,9 @@
+h4 {
+  font-size: 22px;
+}
+p {
+  font-size: 100px;
+}
 body {
   background-image: url("default");
 }
