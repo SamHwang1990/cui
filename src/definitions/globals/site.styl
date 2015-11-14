@@ -7,28 +7,57 @@ element = site
 
 @import '../../themes.config'
 
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+*
+  box-sizing(border-box)
+
+*:before,
+*:after
+  box-sizing(border-box)
+
 /*******************************
              Page
 *******************************/
 html,
-body {
+body
   height 100%
-}
 
-html {
+
+html
   font-size textSize
-}
 
-body {
+
+body
   margin 0px
   padding 0px
   overflow-x pageOverflowX
-  background pageBackground
+  background-color pageBackground
   font-family pageFont
   font-size textSize
   line-height lineHeight
   color textColor
-}
+
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea
+  font-family inherit
+  font-size inherit
+  line-height inherit
+
+// Horizontal rules
+hr
+  margin-top    floor((textSize * lineHeight));
+  margin-bottom @margin-top
+  border 0
+  border-top 1px solid hrBorder
+
 
 /*******************************
              Headers
@@ -82,9 +111,22 @@ a
   color linkColor
   text-decoration linkUnderline
 
-a:hover
-  color linkHoverColor
-  text-decoration linkHoverUnderline
+  &:hover,
+  &:focus
+    color linkHoverColor
+    text-decoration linkHoverUnderline
+
+// todo: need to add link focus reset style like outline
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure
+  margin 0
+
 
 
 /*******************************
