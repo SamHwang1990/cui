@@ -34,10 +34,17 @@ element = grid
   // init column common style
   initGridColumn()
 
-  // make computerBreakpoint grid
+  // make mobileScreen grid
+  makeGridColumnStyle(xs)
 
-  // make mobileBreakpoint grid
+  // make tabletScreen grid
+  @media (min-width: breakpointMin['tablet'])
+    makeGridColumnStyle(sm)
 
-  // make tabletBreakpoint grid
+  // make desktopScreen grid
+  @media (min-width: breakpointMin['desktop'])
+    makeGridColumnStyle(md)
 
-  // make widescreenBreakpoint grid
+  // make largeDesktopScreen grid
+  @media (min-width: breakpointMin['largeDesktop'])
+    makeGridColumnStyle(lg)

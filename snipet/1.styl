@@ -13,4 +13,35 @@ initGridColumn(gutter = 30px)
     padding-left  (gutter / 2)
     padding-right (gutter / 2)
 
+floatGridColumn(breakpointClass)
+  list = ''
+  for index in (1..columnCount)
+    list += ', ' if index > 1
+    list += '.col-' + breakpointClass + '-' + index
+
+  {list}
+    float: left;
+
+calcGridColumnWith(breakpoingClass)
+  for index in (1..columnCount)
+    {'.col-' + breakpoingClass + '-' + index}
+      width (index / columnCount * 100%)
+
+calcGridColumnOffset(breakpoingClass)
+  for index in (1..columnCount)
+    {'.col-' + breakpoingClass + '-offset-' + index}
+      margin-left (index / columnCount * 100%)
+
+calcGridColumnPush(breakpoingClass)
+  {'.col-' + breakpoingClass + '-push-0'}
+    left auto
+
+  for index in (1..columnCount)
+    {'.col-' + breakpoingClass + '-push-' + index}
+      left (index / columnCount * 100%)
+
+calcGridColumnPush(xs)
+calcGridColumnOffset(xs)
+calcGridColumnWith(xs)
+floatGridColumn(xs)
 initGridColumn()

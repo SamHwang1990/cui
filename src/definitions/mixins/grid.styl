@@ -2,6 +2,7 @@ initGridBox()
   box-sizing(border-box)
 
 initGridContainer(gutter = gridGutterWidth)
+  box-sizing(border-box)
   margin-right auto
   margin-left auto
   padding-left (gutter / 2)
@@ -9,6 +10,7 @@ initGridContainer(gutter = gridGutterWidth)
   clearfix()
 
 initGridRow(gutter = gridGutterWidth)
+  box-sizing(border-box)
   margin-left (gutter / -2)
   margin-right @margin-left
   clearfix()
@@ -20,6 +22,7 @@ initGridColumn(gutter = gridGutterWidth)
     list += '.col-xs-' + index + ', .col-sm-' + index + ', .col-md-' + index + ', .col-lg-' + index
 
   {list}
+    box-sizing(border-box)
     position relative
     // Prevent columns from collapsing when empty
     min-height 1px
@@ -27,17 +30,44 @@ initGridColumn(gutter = gridGutterWidth)
     padding-left  (gutter / 2)
     padding-right (gutter / 2)
 
-floatGridColumn()
+floatGridColumn(breakpointClass)
+  list = ''
+  for index in (1..columnCount)
+    list += ', ' if index > 1
+    list += '.col-' + breakpointClass + '-' + index
 
-calcGridColumnWith()
+  {list}
+    float: left;
 
-calcGridColumnOffset()
+calcGridColumnWith(breakpoingClass)
+  for index in (1..columnCount)
+    {'.col-' + breakpoingClass + '-' + index}
+      width (index / columnCount * 100%)
 
-calcGridColumnPush()
+calcGridColumnOffset(breakpoingClass)
+  for index in (1..columnCount)
+    {'.col-' + breakpoingClass + '-offset-' + index}
+      margin-left (index / columnCount * 100%)
 
-calcGridColumnPull()
+calcGridColumnPush(breakpoingClass)
+  {'.col-' + breakpoingClass + '-push-0'}
+    left auto
 
-loopGridColumnInit()
+  for index in (1..columnCount)
+    {'.col-' + breakpoingClass + '-push-' + index}
+      left (index / columnCount * 100%)
 
+calcGridColumnPull(breakpoingClass)
+  {'.col-' + breakpoingClass + '-push-0'}
+    right auto
+
+  for index in (1..columnCount)
+    {'.col-' + breakpoingClass + '-pull-' + index}
+      right (index / columnCount * 100%)
 
 makeGridColumnStyle(breakpointClass)
+  floatGridColumn(breakpointClass)
+  calcGridColumnWith(breakpointClass)
+  calcGridColumnOffset(breakpointClass)
+  calcGridColumnPush(breakpointClass)
+  calcGridColumnPull(breakpointClass)
