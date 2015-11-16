@@ -167,16 +167,22 @@ twelveColumn = (1 / 12 * 100%)
 /*-------------------
      Breakpoints
 --------------------*/
-mobileBreakpoint            = 320px
-tabletBreakpoint            = 768px
-computerBreakpoint          = 992px
-largeMonitorBreakpoint      = 1200px
-widescreenMonitorBreakpoint = 1920px
+breakpoint = {
+  mobile: 320px,
+  tablet: 768px,
+  desktop: 992px,
+  largeDesktop: 1200px,
+  wideDesktop: 1920px
+}
 
-largestMobileScreen = (tabletBreakpoint - 1px)
-largestTabletScreen = (computerBreakpoint - 1px)
-largestSmallMonitor = (largeMonitorBreakpoint - 1px)
-largestLargeMonitor = (widescreenMonitorBreakpoint - 1px)
+breakpointMax = {
+  mobile: (breakpoint.tablet - 1px),
+  tablet: (breakpoint.desktop - 1px),
+  desktop: (breakpoint.largeDesktop - 1px),
+  largeDesktop: (breakpoint.wideDesktop - 1px)
+}
+
+breakpointMin = breakpoint
 
 /*-------------------
     Sizes

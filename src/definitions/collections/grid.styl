@@ -7,3 +7,37 @@ element = grid
 
 @import '../../theme.config'
 
+.cui.grid
+  initGridBox()
+
+  // init container element
+  .container
+    initGridContainer()
+
+    @media (min-width: breakpointMin['tablet'])
+      width gridContainerFixWidth['tablet']
+
+    @media (min-width: breakpointMin['desktop'])
+      width gridContainerFixWidth['desktop']
+
+    @media (min-width: breakpointMin['largeDesktop'])
+      width gridContainerFixWidth['largeDesktop']
+
+  .container-fluid
+    initGridContainer()
+
+
+  // init row
+  .row
+    initGridRow()
+
+  // init column common style
+  initGridColumn()
+
+  // make computerBreakpoint grid
+
+  // make mobileBreakpoint grid
+
+  // make tabletBreakpoint grid
+
+  // make widescreenBreakpoint grid

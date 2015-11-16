@@ -1,2 +1,43 @@
 initGridBox()
   box-sizing(border-box)
+
+initGridContainer(gutter = gridGutterWidth)
+  margin-right auto
+  margin-left auto
+  padding-left (gutter / 2)
+  padding-right @padding-left
+  clearfix()
+
+initGridRow(gutter = gridGutterWidth)
+  margin-left (gutter / -2)
+  margin-right @margin-left
+  clearfix()
+
+initGridColumn(gutter = gridGutterWidth)
+  list = ''
+  for index in (1..columnCount)
+    list += ', ' if index > 1
+    list += '.col-xs-' + index + ', .col-sm-' + index + ', .col-md-' + index + ', .col-lg-' + index
+
+  {list}
+    position relative
+    // Prevent columns from collapsing when empty
+    min-height 1px
+    // Inner gutter via padding
+    padding-left  (gutter / 2)
+    padding-right (gutter / 2)
+
+floatGridColumn()
+
+calcGridColumnWith()
+
+calcGridColumnOffset()
+
+calcGridColumnPush()
+
+calcGridColumnPull()
+
+loopGridColumnInit()
+
+
+makeGridColumnStyle(breakpointClass)
