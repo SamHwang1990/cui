@@ -1,8 +1,8 @@
 initGridBox()
-  box-sizing(border-box)
+  boxSizing(border-box)
 
 initGridContainer(gutter = gridGutterWidth)
-  box-sizing(border-box)
+  boxSizing(border-box)
   margin-right auto
   margin-left auto
   padding-left (gutter / 2)
@@ -22,7 +22,7 @@ initGridColumn(gutter = gridGutterWidth)
     list += '.col-xs-' + index + ', .col-sm-' + index + ', .col-md-' + index + ', .col-lg-' + index
 
   {list}
-    box-sizing(border-box)
+    boxSizing(border-box)
     position relative
     // Prevent columns from collapsing when empty
     min-height 1px

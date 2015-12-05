@@ -1,0 +1,42 @@
+.text-red {
+  color: #db2828;
+}
+.text-orange {
+  color: #f2711c;
+}
+.text-yellow {
+  color: #fbbd08;
+}
+.text-olive {
+  color: #b5cc18;
+}
+.text-green {
+  color: #21ba45;
+}
+.text-teal {
+  color: #00b5ad;
+}
+.text-blue {
+  color: #2185d0;
+}
+.text-violet {
+  color: #6435c9;
+}
+.text-purple {
+  color: #a333c8;
+}
+.text-pink {
+  color: #e03997;
+}
+.text-brown {
+  color: #a5673f;
+}
+.text-grey {
+  color: #767676;
+}
+.text-black {
+  color: #1b1c1d;
+}
+.text-pink {
+  font-size: 24px;
+}

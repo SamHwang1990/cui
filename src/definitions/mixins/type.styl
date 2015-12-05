@@ -1,0 +1,10 @@
+textEmotiveVariant(@color)
+  color: @color;
+  a&:focus,
+  a&:hover
+    color: darken(@color, 10%);
+
+textColorVariant(colorKey)
+  _color = lookup(colorKey)
+  .text-{colorKey}
+    textEmotiveVariant(_color)

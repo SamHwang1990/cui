@@ -1,0 +1,31 @@
+red    = #DB2828
+orange = #F2711C
+yellow = #FBBD08
+olive  = #B5CC18
+green  = #21BA45
+teal   = #00B5AD
+blue   = #2185D0
+violet = #6435C9
+purple = #A333C8
+pink   = #E03997
+brown  = #A5673F
+grey   = #767676
+black  = #1B1C1D
+
+colorArray = ('red' 'orange' 'yellow' 'olive' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black')
+
+// red orange yellow ovlive green teal blue violet purple pink brown grey black
+colorLoop(_mixin)
+  for index in colorArray
+    _mixin(index)
+
+
+titleMixin(_color)
+  .text-{_color}
+    color lookup(_color)
+
+
+colorLoop(titleMixin)
+
+.text-{'pink'}
+  font-size: 24px;

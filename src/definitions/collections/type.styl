@@ -5,4 +5,51 @@
 type = 'collection'
 element = type
 
-@import '../../theme.config'
+@import '../../themes.config.styl'
+
+
+/*-------------------
+    1. Element style reset
+--------------------*/
+
+
+/*-------------------
+    2. font-face utility definitions
+--------------------*/
+
+
+/*-------------------
+    3. Hanzi font-family utility class definitions
+--------------------*/
+
+
+/*-------------------
+    4. .article class definitions
+--------------------*/
+
+
+/*-------------------
+    5. text utility class definitions
+--------------------*/
+// Emotive Text
+.text-primary
+  textEmotiveVariant(primaryColor)
+.text-positive
+  textEmotiveVariant(positiveColor)
+.text-negative
+  textEmotiveVariant(negativeColor)
+
+// Color Text
+colorLoop(textColorVariant)
+
+// Alignment Text
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation Text
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
