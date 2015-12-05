@@ -28,12 +28,20 @@ emSize = 14px
 /* The size of page text  */
 textSize = 14px
 
+// Refer from Bootstrap
+//** Unit-less `line-height` for use in components like buttons.
+lineHeightBase     = 1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+lineHeightComputed = floor((textSize * lineHeightBase)); // ~20px
+
 
 /*-------------------
     Page Heading
 --------------------*/
 headerFontWeight = bold
 headerLineHeight = 1.2857em
+headerMargin     = lineHeightComputed 0 (lineHeightComputed / 2)
+headerColor      = inherit
 
 h1Size = 28px
 h2Size = 24px
@@ -60,10 +68,6 @@ paragraphMargin     = 0em 0em 1em
 paragraphLineHeight = lineHeight
 
 
-/*-------------------
-      Hr
---------------------*/
-hrBorder = grayLighter
 
 /*-------------------
     Form Input
@@ -107,7 +111,7 @@ borderRadiusSmall       = 3px
 linkColor           = #4183C4
 linkUnderline       = none
 linkHoverColor      = darken(saturate(@linkColor, 20), 15);
-linkHoverUnderline  = none
+linkHoverUnderline  = underline
 
 /*-------------------
   Highlighted Text

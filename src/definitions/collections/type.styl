@@ -11,7 +11,161 @@ element = type
 /*-------------------
     1. Element style reset
 --------------------*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  padding 0
+  font-family: headerFont
+  font-weight: headerFontWeight
+  line-height: headerLineHeight
+  color: headerColor
 
+  small,
+  .small
+    font-weight: normal
+    line-height: 1
+    color: headerSmallColor
+
+// global header size
+h1, .h1
+  font-size: h1Size
+h2, .h2
+  font-size: h2Size
+h3, .h3
+  font-size: h3Size
+h4, .h4
+  font-size: h4Size
+h5, .h5
+  font-size: h5Size
+h6, .h6
+  font-size: h6Size
+
+h1, h2, h3,
+.h1, .h2, .h3
+  margin lineHeightComputed 0 (lineHeightComputed / 2)
+
+  small,
+  .small
+    font-size: 65%
+
+h1, h2, h3,
+.h1, .h2, .h3
+  margin (lineHeightComputed / 2) 0
+
+  small,
+  .small
+    font-size: 75%
+
+p
+  margin paragraphMargin
+  line-height paragraphLineHeight
+
+
+// Lists
+// Below are some basic roles about list, more detailed styles will be place in collections/list
+// Todo: roles below can be move into .article
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0
+  margin-bottom: (lineHeight / 2)
+  ul,
+  ol {
+    margin-bottom: 0
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0 // Remove browser default
+  margin-bottom: lineHeight
+}
+dt,
+dd {
+  line-height: lineHeight;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+// Table
+// Todo: roles below can be move into .article
+// -------------------------
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+a
+  color: linkColor
+  text-decoration: linkUnderline
+
+  &:hover,
+  &:focus
+    color: linkHoverColor
+    text-decoration: linkHoverUnderline
+
+  &:focus
+    tabFocus()
+
+
+address
+  margin-bottom: lineHeightComputed
+  font-style: normal
+  line-height: lineHeightBase
+
+
+em, cite
+  font-style: italic
+
+q
+  quotes: qQuoteEn
+
+  &:lang(zh)
+    quotes: qQuoteCn
+
+  &:before
+    content: open-quote
+  &:after
+    content: close-quote
+
+u, ins
+  text-decoration: underline
+
+s, del
+  text-decoration: line-through
+
+// Abbreviations and acronyms
+abbr[title]
+  cursor: help
+  border-bottom: 1px dotted abbrBorderColor
+
+small,
+.small {
+  font-size: relativeMini
+}
+
+mark,
+.mark {
+  background-color: yellowBackground
+  padding: .2em
+}
+
+hr {
+  margin-top:    lineHeightComputed
+  margin-bottom: lineHeightComputed
+  border: 0
+  border-top: 1px solid hrBorderColor
+}
+
+// todo: blockquote
+
+// todo: pre, code, kbd, samp, var, i
 
 /*-------------------
     2. font-face utility definitions
@@ -53,3 +207,5 @@ colorLoop(textColorVariant)
 .text-lowercase      { text-transform: lowercase; }
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
+
+loadUIOverrides()
