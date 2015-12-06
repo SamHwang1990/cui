@@ -140,30 +140,65 @@ u, ins
 s, del
   text-decoration: line-through
 
-// Abbreviations and acronyms
 abbr[title]
   cursor: help
   border-bottom: 1px dotted abbrBorderColor
 
 small,
-.small {
+.small
   font-size: relativeMini
-}
 
 mark,
-.mark {
+.mark
   background-color: yellowBackground
   padding: .2em
-}
 
-hr {
+hr
   margin-top:    lineHeightComputed
   margin-bottom: lineHeightComputed
   border: 0
   border-top: 1px solid hrBorderColor
-}
 
 // todo: blockquote
+blockquote
+  padding: (lineHeightComputed / 2) lineHeightComputed
+  margin: 0 0 lineHeightComputed
+  font-size: blockquoteFontSize
+  border-left: 5px solid blockquoteBorderColor
+
+  p,
+  ul,
+  ol,
+  dl
+    &:last-child // not compatible in ie8-
+      margin-bottom: 0
+
+  footer,
+  small,
+  .small
+    display: block
+    font-size: 80%
+    line-height: lineHeightComputed
+    color: blockquoteSmallColor
+
+    &:before
+      content: '\2014 00A0'
+
+.blockquote-reverse,
+blockquote.pull-right
+  padding-right: 15px
+  padding-left: 0
+  border-left: 0
+  border-right: 5ps solid blockquoteBorderColor
+  text-align: right
+
+  footer,
+  small,
+  .small
+    &:befor
+      content: ''
+    &:after
+      content: '\2014 00A0'
 
 // todo: pre, code, kbd, samp, var, i
 
