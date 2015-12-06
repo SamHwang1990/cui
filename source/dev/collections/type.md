@@ -1,21 +1,19 @@
 # Type dev note
 
 ## 元素样式重置
-1. 中文样式 + 英文样式；
-2. 默认中文；
-3. 要使用英文，需html 元素、文章包裹元素或者具体的元素添加lang 属性；
+1. h1~h6, font face, line-height, margin, padding etc;
 
 ## 中文字体通用类定义
 1. .font-hei
-2. .font-song
-3. .font-kai
-4. .font-ming
-5. .font-fang-song
+2. .font-kai
+3. .font-song
+4. .font-fang-song
+5. .font-ming
 
 ## 元素字体重置
-
+1. 标点字体；
+2. 数字字体，等高
 
 ## .article 样式规范
 
 ## 文字工具类定义
-参考bootstrap

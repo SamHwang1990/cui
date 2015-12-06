@@ -201,6 +201,50 @@ blockquote.pull-right
       content: '\2014 00A0'
 
 // todo: pre, code, kbd, samp, var, i
+code,
+kbd
+  padding: 2px 4px
+  font-size: 90%
+  border-radius: borderRadiusBase
+
+code
+  color: codeColor
+  background-color: codeBg
+
+kbd
+  color: kbdColor
+  background-color: kbdBg
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)
+
+  kbd
+    padding: 0
+    font-size: 100%
+    font-weight: bold
+    box-shadow: none
+    border-radius: 0
+
+pre
+  display: block
+  padding: (lineHeightComputed / 2)
+  margin: 0 0 (lineHeightComputed / 2)
+  font-size: (textSize - 1)  // 14px to 13px
+  color: preColor
+  word-break: break-all
+  word-wrap: break-word
+  background-color: preBg
+  border: 1px solid preBorderColor
+
+  code
+    padding: 0
+    font-size: inherit
+    color: inherit
+    white-space: pre-wrap
+    background-color: transparent
+    border-radius: 0
+
+i,
+var
+  font-style: italic
 
 /*-------------------
     2. font-face utility definitions
