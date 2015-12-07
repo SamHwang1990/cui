@@ -1,0 +1,96 @@
+/*-------------------
+    Font-Face Definitions
+--------------------*/
+// 中文标点,参考Han.css 的Biaodian Pro,简体繁体均适用
+
+// 单点全形句号修正(．)
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src:
+    local('Hiragino Sans GB'),
+    local('Heiti SC'),
+    local(STHeiti),
+    local(SimSun);
+  unicode-range: U+FF0E;
+}
+
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src:
+    local('Songti SC'),
+    local(STSong),
+    local(SimSun);
+  unicode-range: U+FF0E;
+}
+
+// 间隔号修正(·)为一汉字宽,多见于西文
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src:
+    local('Hiragino Sans GB'),
+    local('Heiti SC'),
+    local(STHeiti),
+    local(SimSun);
+  unicode-range: U+00B7;
+}
+
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src:
+    local('Songti SC'),
+    local(STSong),
+    local('Heiti SC'),
+    local(SimSun);
+  unicode-range: U+00B7;
+}
+
+// 破折号修正,相连时无间隔,单独适用时两侧不连字符(——)
+// todo: 与Han.css 不同,这里没有声明han.woff 字体,所以,可能并不会达到预期效果,需要仔细测试
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src:
+    local('Hiragino Sans GB'),
+    local('Microsoft Yahei'),
+    local(SimSun);
+  unicode-range: U+2014;
+}
+
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src:
+    $han-webfont,
+    local('Hiragino Mincho ProN'),
+    local('Hiragino Mincho Pro'),
+    local('Songti SC'), local(STSong),
+    local('Microsoft Yahei'),
+    local(SimSun);
+  unicode-range: U+2014;
+}
+
+// 省略号修正,相连时居中,单独使用时沉底
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src:
+    local('Hiragino Sans GB'),
+    local(SimSun),
+    local(PMingLiU);
+  unicode-range: U+2026;
+}
+
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src:
+    local('Songti SC'),
+    local(SimSun),
+    local(PMingLiU);
+  unicode-range: U+2026;
+}
+
+
+// 中文字体
+
+// 数字字体
+
+// 西文意大利体
+
+// 西文字体
