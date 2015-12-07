@@ -87,7 +87,103 @@
 }
 
 
-// 中文字体
+// 中文字体,参考自Han.css Han Heiti GB,和fonts.css
+// 黑体
+@font-face {
+  font-family: 'CUI HeiTi';
+  src:
+    local('Hiragino Sans GB'),
+    local('PingFang SC Light'),
+    local('PingFang-SC-Light'),
+    local('PingFang SC'),
+    local('Lantinghei SC Extralight'),
+    local(FZLTXHK--GBK1-0),
+    local('Lantinghei SC'),
+    local('Heiti SC Light'),
+    local(STHeitiSC-Light),
+    local('Heiti SC'),
+
+    local('Microsoft Yahei'),
+
+    local('Source Han Sans SC'),
+    local('Source Han Sans CN'),
+
+    local('Wenquanyi Micro Hei'),
+    local('WenQuanYi Zen Hei'),
+
+    local('SimHei'),
+    local('WenQuanYi Zen Hei Sharp'),
+
+    local('Droid Sans Fallback'),
+    local(sans-serif);
+}
+
+// 宋体
+@font-face {
+  font-family: 'CUI Songti GB';
+  src:
+    local('Songti SC Regular'),
+    local(STSongti-SC-Regular),
+    local('Songti SC'),
+    local(STSong),
+
+    local(NSimSun),
+    local(SimSun),
+
+    local('AR PL New Sung'),
+
+    local('TW\-Sung'),
+
+    local('WenQuanYi Bitmap Song'),
+    local('AR PL UMing CN'),
+    local('AR PL UMing HK'),
+    local('AR PL UMing TW'),
+    local('AR PL UMing TW MBE'),
+
+    local(serif);
+}
+
+// 楷体
+@font-face {
+  han-range-cjk();
+  font-family: 'CUI Kaiti GB';
+  src:
+    local('Kaiti SC Regular'),
+    local(STKaiTi-SC-Regular),
+    local('Kaiti SC'),
+    local(STKaiti),
+
+    local(Kai),
+    local(Kaiti),
+    local(KaiTi_GB2312),
+
+    local('AR PL UKai CN'),
+    local('AR PL UKai HK'),
+    local('AR PL UKai TW'),
+    local('AR PL UKai TW MBE'),
+
+    local('AR PL KaitiM GB'),
+
+    local(DFKai-SB),
+
+    local('TW\-Kai'),
+
+    local(serif);
+}
+
+// 仿宋
+@font-face {
+  font-family: 'Han Fangsong GB';
+  src:
+    local(STFangsong),
+    local(FangSong),
+    local(FangSong_GB2312),
+    local('CWTEX\-F'),
+
+    local(serif);
+}
+
+
 
 // 数字字体
 
