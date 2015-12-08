@@ -58,10 +58,10 @@
 @font-face {
   font-family: 'Biaodian Pro Serif';
   src:
-    $han-webfont,
     local('Hiragino Mincho ProN'),
     local('Hiragino Mincho Pro'),
-    local('Songti SC'), local(STSong),
+    local('Songti SC'),
+    local(STSong),
     local('Microsoft Yahei'),
     local(SimSun);
   unicode-range: U+2014;
@@ -90,43 +90,45 @@
 // 中文字体,参考自Han.css Han Heiti GB,和fonts.css
 // 黑体
 @font-face {
-  font-family: 'CUI HeiTi';
+  font-family: 'CUI HeiTi GB';
   src:
+    // mac
     local('Hiragino Sans GB'),
-    local('PingFang SC Light'),
-    local('PingFang-SC-Light'),
     local('PingFang SC'),
     local('Lantinghei SC Extralight'),
     local(FZLTXHK--GBK1-0),
     local('Lantinghei SC'),
-    local('Heiti SC Light'),
-    local(STHeitiSC-Light),
     local('Heiti SC'),
 
+    // windows
     local('Microsoft Yahei'),
+    local('SimHei'),
 
+    // adobe
     local('Source Han Sans SC'),
     local('Source Han Sans CN'),
 
+    // linux
     local('Wenquanyi Micro Hei'),
     local('WenQuanYi Zen Hei'),
-
-    local('SimHei'),
     local('WenQuanYi Zen Hei Sharp'),
 
+    // android
     local('Droid Sans Fallback'),
     local(sans-serif);
 }
 
 // 宋体
 @font-face {
-  font-family: 'CUI Songti GB';
+  font-family: 'CUI SongTi GB';
   src:
+    // mac
     local('Songti SC Regular'),
     local(STSongti-SC-Regular),
     local('Songti SC'),
     local(STSong),
 
+    // windows
     local(NSimSun),
     local(SimSun),
 
@@ -134,6 +136,7 @@
 
     local('TW\-Sung'),
 
+    // linux
     local('WenQuanYi Bitmap Song'),
     local('AR PL UMing CN'),
     local('AR PL UMing HK'),
@@ -145,18 +148,20 @@
 
 // 楷体
 @font-face {
-  han-range-cjk();
-  font-family: 'CUI Kaiti GB';
+  font-family: 'CUI KaiTi GB';
   src:
+    // mac
     local('Kaiti SC Regular'),
     local(STKaiTi-SC-Regular),
     local('Kaiti SC'),
     local(STKaiti),
 
+    // windows
     local(Kai),
     local(Kaiti),
     local(KaiTi_GB2312),
 
+    // linux
     local('AR PL UKai CN'),
     local('AR PL UKai HK'),
     local('AR PL UKai TW'),
@@ -173,7 +178,7 @@
 
 // 仿宋
 @font-face {
-  font-family: 'Han Fangsong GB';
+  font-family: 'CUI Fangsong GB';
   src:
     local(STFangsong),
     local(FangSong),
@@ -184,9 +189,30 @@
 }
 
 
-
-// 数字字体
-
-// 西文意大利体
-
 // 西文字体
+
+// serif
+@font-face {
+  font-family: 'CUI Serif';
+  src:
+    local(Georgia),
+    local('Times New Roman')
+}
+
+// san-serif
+@font-face {
+  font-family: 'CUI Sans';
+  src:
+    local('Helvetica Neue'),
+    local(Helvetica),
+    local(Arial)
+}
+
+// mono
+@font-face {
+  font-family: 'CUI Mono';
+  src:
+    local(Menlo),
+    local(Consolas),
+    local(Courier)
+}

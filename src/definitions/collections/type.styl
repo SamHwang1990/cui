@@ -69,7 +69,7 @@ p
 ul,
 ol {
   margin-top: 0
-  margin-bottom: (lineHeight / 2)
+  margin-bottom: (lineHeightComputed / 2)
   ul,
   ol {
     margin-bottom: 0
@@ -184,6 +184,10 @@ blockquote
     &:before
       content: '\2014 00A0'
 
+  blockquote
+    padding: 0 0 0 (lineHeightComputed / 2)
+    border-left: none
+
 .blockquote-reverse,
 blockquote.pull-right
   padding-right: 15px
@@ -249,17 +253,59 @@ var
 /*-------------------
     2. font-face utility definitions
 --------------------*/
+.cui.font-hei
+  font-family: 'CUI Sans', 'CUI HeiTi GB', sans-serif
 
+.cui.font-song
+  font-family: 'CUI Serif', 'CUI SongTi GB', serif
+
+.cui.font-kai
+  font-family: 'CUI Serif', 'CUI KaiTi GB', serif
+
+.cui.font-fang-song
+  font-family: 'CUI Serif', 'CUI Fangsong GB', serif
 
 /*-------------------
-    3. Hanzi font-family utility class definitions
+    3. Hanzi font-family definitions
 --------------------*/
+code,
+kbd,
+samp,
+pre
+  font-family: 'CUI Mono', 'CUI HeiTi GB', monospace, sans-serif
+
+i,
+var
+  font-family: 'Biaodian Pro Serif', 'CUI Serif', 'CUI KaiTi GB', serif
+
+.cui.article
+  strong
+    font-family: 'Biaodian Pro Sans', 'CUI Sans', 'CUI HeiTi GB', sans-serif
+
+  blockquote
+    font-family: 'Biaodian Pro Serif', 'CUI Serif', 'CUI KaiTi GB', serif
+
+    i,
+    var
+      font-family: 'Biaodian Pro Sans', 'CUI Sans', 'CUI HeiTi GB', sans-serif
+
+figure
+  blockquote
+    font-family: 'Biaodian Pro Serif', 'CUI Serif', 'CUI SongTi GB', serif
 
 
 /*-------------------
     4. .article class definitions
 --------------------*/
+.cui.article
+  line-height: 1.7
 
+    & > blockquote
+      @media (max-width: breakpointMax['mobile'])
+        padding-left: (lineHeightComputed / 2)
+
+figure > blockquote
+    padding: (lineHeightComputed / 2)
 
 /*-------------------
     5. text utility class definitions
