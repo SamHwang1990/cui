@@ -1,8 +1,13 @@
-textEmotiveVariant(@color)
-  color: @color
+langZhPseudo()
+  &:lang(zh),
+  &:lang(zh-CN)
+    {block}
+
+textEmotiveVariant(_color)
+  color: _color
   a&:focus,
   a&:hover
-    color: darken(@color, 10%);
+    color: darken(_color, 10%);
 
 textColorVariant(colorKey)
   _color = lookup(colorKey)
