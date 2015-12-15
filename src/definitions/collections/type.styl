@@ -8,6 +8,9 @@ element = type
 @import '../../themes.config.styl'
 
 @import "../mixins/type.styl"
+@import "../mixins/font-face.styl"
+@import "../mixins/tab-focus.styl"
+@import "../mixins/color-loop.styl"
 
 
 /*-------------------
@@ -297,16 +300,16 @@ var
 /*-------------------
     2. font-face utility definitions
 --------------------*/
-.cui.font-hei
+.font-hei
   font-family: 'CUI Sans', 'CUI HeiTi GB', sans-serif
 
-.cui.font-song
+.font-song
   font-family: 'CUI Serif', 'CUI SongTi GB', serif
 
-.cui.font-kai
+.font-kai
   font-family: 'CUI Serif', 'CUI KaiTi GB', serif
 
-.cui.font-fang-song
+.font-fang-song
   font-family: 'CUI Serif', 'CUI Fangsong GB', serif
 
 /*-------------------
@@ -322,7 +325,7 @@ i,
 var
   font-family: 'Biaodian Pro Serif', 'CUI Serif', 'CUI KaiTi GB', serif
 
-.cui.article
+.article
   strong
     font-family: 'Biaodian Pro Sans', 'CUI Sans', 'CUI HeiTi GB', sans-serif
 
@@ -341,7 +344,7 @@ figure
 /*-------------------
     4. .article class definitions
 --------------------*/
-.cui.article
+.article
   line-height: 1.7
 
     & > blockquote
