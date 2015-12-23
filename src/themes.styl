@@ -3,8 +3,10 @@
 *******************************/
 use('./helpers/file-exist.js')
 
-theme = element;
+// import theme config
+@import 'themes.config.styl'
 
+theme = lookup(element);
 
 /*--------------------
    Site Variables

@@ -3,9 +3,9 @@
 *******************************/
 
 type    = 'global'
-element = site
+element = 'site'
 
-@import '../../themes.config'
+@import '../../themes.styl'
 
 @import '../mixins/vendor-prefixes.styl'
 
@@ -15,11 +15,11 @@ element = site
 // For recommendations on resolving such conflicts, see
 // http://getbootstrap.com/getting-started/#third-box-sizing
 *
-  boxSizing(border-box)
+  box-sizing: border-box
 
 *:before,
 *:after
-  boxSizing(border-box)
+  box-sizing: border-box
 
 /*******************************
              Page

@@ -1,11 +1,10 @@
-@import "vendor-prefixes.styl"
 @import "clearfix.styl"
 
 initGridBox()
-  boxSizing(border-box)
+  box-sizing: border-box
 
 initGridContainer(gutter = gridGutterWidth)
-  boxSizing(border-box)
+  box-sizing: border-box
   margin-right auto
   margin-left auto
   padding-left (gutter / 2)
@@ -13,7 +12,7 @@ initGridContainer(gutter = gridGutterWidth)
   clearfix()
 
 initGridRow(gutter = gridGutterWidth)
-  box-sizing(border-box)
+  box-sizing: border-box
   margin-left (gutter / -2)
   margin-right @margin-left
   clearfix()
@@ -25,7 +24,7 @@ initGridColumn(gutter = gridGutterWidth)
     list += '.col-xs-' + index + ', .col-sm-' + index + ', .col-md-' + index + ', .col-lg-' + index
 
   {list}
-    boxSizing(border-box)
+    box-sizing: border-box
     position relative
     // Prevent columns from collapsing when empty
     min-height 1px
