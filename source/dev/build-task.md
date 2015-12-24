@@ -23,3 +23,13 @@
 2. css build
 3. iconfont build
 4. js build
+
+## test tasks
+1. css build
+2. css lint
+3. js build
+4. jshint dist
+5. jscs dist
+6. jshint test
+7. jscs test
+8. run test/*.js
