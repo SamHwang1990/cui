@@ -1,19 +1,19 @@
 /*******************************
         Import Directives
 *******************************/
-use('./helpers/file-exist.js')
+use('./helpers/file-exist.js');
 
 // import theme config
-@import 'themes.config.styl'
+@import './themes.config.styl'
 
-theme = lookup(element);
+theme = lookup('_' + element);
 
 /*--------------------
    Site Variables
 ---------------------*/
 
 /* Default */
-defaultGlobalSiteVariable = themesFolder ＋ '/default/globals/site.variables.styl'
+defaultGlobalSiteVariable = themesFolder + '/default/globals/site.variables.styl'
 @import defaultGlobalSiteVariable if file-exists(defaultGlobalSiteVariable)
 
 /* Packaged Theme */

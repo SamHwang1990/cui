@@ -64,7 +64,7 @@ textColor           = black
 /*-------------------
       Paragraph
 --------------------*/
-paragraphMargin     = 0em 0em (lineHeightComputed / 2)
+paragraphMargin     = 0 0 (lineHeightComputed / 2)
 paragraphLineHeight = lineHeight
 
 
@@ -110,7 +110,7 @@ borderRadiusSmall       = 3px
 --------------------*/
 linkColor           = #4183C4
 linkUnderline       = none
-linkHoverColor      = darken(saturate(@linkColor, 20), 15);
+linkHoverColor      = darken(saturate(linkColor, 20), 15);
 linkHoverUnderline  = underline
 
 /*-------------------
@@ -120,7 +120,7 @@ linkHoverUnderline  = underline
 highlightBackground      = #CCE2FF
 highlightColor           = textColor
 
-inputHighlightBackground = lighten(rgb(100, 100, 100))
+inputHighlightBackground = rgb(100, 100, 100)
 inputHighlightColor      = textColor
 
 /*-------------------
@@ -188,14 +188,14 @@ relativeHuge    = unit( round(hugeSize * emSize) / emSize, em)
 relativeMassive = unit( round(massiveSize * emSize) / emSize, em)
 
 /* px */
-absoluteMini    = unit( round(@miniSize * @emSize), px)
-absoluteTiny    = unit( round(@tinySize * @emSize), px)
-absoluteSmall   = unit( round(@smallSize * @emSize), px)
-absoluteMedium  = unit( round(@mediumSize * @emSize), px)
-absoluteLarge   = unit( round(@largeSize * @emSize), px)
-absoluteBig     = unit( round(@bigSize * @emSize), px)
-absoluteHuge    = unit( round(@hugeSize * @emSize), px)
-absoluteMassive = unit( round(@massiveSize * @emSize), px)
+absoluteMini    = unit( round(miniSize * emSize), px)
+absoluteTiny    = unit( round(tinySize * emSize), px)
+absoluteSmall   = unit( round(smallSize * emSize), px)
+absoluteMedium  = unit( round(mediumSize * emSize), px)
+absoluteLarge   = unit( round(largeSize * emSize), px)
+absoluteBig     = unit( round(bigSize * emSize), px)
+absoluteHuge    = unit( round(hugeSize * emSize), px)
+absoluteMassive = unit( round(massiveSize * emSize), px)
 
 /*
   exact pixel values
@@ -245,8 +245,8 @@ primaryColor           = #057ab8
 primaryLightColor      = #188BCE
 primaryBackgroundColor = blueBackground
 primaryBorderColor     = primaryLightColor
-primaryHeaderColor     = darken(primaryTextColor, 5)
 primaryTextColor       = primaryColor
+primaryHeaderColor     = darken(primaryTextColor, 5)
 
 
 /*-------------------

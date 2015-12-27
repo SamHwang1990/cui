@@ -12,9 +12,23 @@ element = 'typo'
 @import "../mixins/tab-focus.styl"
 @import "../mixins/color-loop.styl"
 
+/*-------------------
+    1. font-face utility definitions
+--------------------*/
+.font-hei
+  font-family: 'CUI Sans', 'CUI HeiTi GB', sans-serif
+
+.font-song
+  font-family: 'CUI Serif', 'CUI SongTi GB', serif
+
+.font-kai
+  font-family: 'CUI Serif', 'CUI KaiTi GB', serif
+
+.font-fang-song
+  font-family: 'CUI Serif', 'CUI Fangsong GB', serif
 
 /*-------------------
-    1. Element style reset
+    2. Element style reset
 --------------------*/
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6
@@ -148,19 +162,20 @@ em
       content: "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・";
 
     // 支持text-emphasis 和text-emphasis-position 的情况下
-    @supports(text-emphasis: filled circle) and (text-emphasis-position: under){
+@supports(text-emphasis: filled circle) and (text-emphasis-position: under left)
+  em
+    +langZhPseudo()
       font-style: inherit;
       font-weight: inherit;
       text-decoration: inherit;
       text-emphasis: filled circle;
-      text-emphasis-position: under;
+      text-emphasis-position: under left;
 
       &:after
         content: ''
         position: relative
         width: 0;
         height: 0
-    }
 
 q
   quotes: qQuoteEn
@@ -240,18 +255,17 @@ blockquote.pull-right
   padding-right: 15px
   padding-left: 0
   border-left: 0
-  border-right: 5ps solid blockquoteBorderColor
+  border-right: 5px solid blockquoteBorderColor
   text-align: right
 
   footer,
   small,
   .small
-    &:befor
+    &:before
       content: ''
     &:after
       content: '\2014 00A0'
 
-// todo: pre, code, kbd, samp, var, i
 code,
 kbd
   padding: 2px 4px
@@ -298,21 +312,6 @@ var
   font-style: italic
 
 /*-------------------
-    2. font-face utility definitions
---------------------*/
-.font-hei
-  font-family: 'CUI Sans', 'CUI HeiTi GB', sans-serif
-
-.font-song
-  font-family: 'CUI Serif', 'CUI SongTi GB', serif
-
-.font-kai
-  font-family: 'CUI Serif', 'CUI KaiTi GB', serif
-
-.font-fang-song
-  font-family: 'CUI Serif', 'CUI Fangsong GB', serif
-
-/*-------------------
     3. Hanzi font-family definitions
 --------------------*/
 code,
@@ -347,9 +346,9 @@ figure
 .article
   line-height: 1.7
 
-    & > blockquote
-      @media (max-width: breakpointMax['mobile'])
-        padding-left: (lineHeightComputed / 2)
+  & > blockquote
+    @media (max-width: breakpointMax['mobile'])
+      padding-left: (lineHeightComputed / 2)
 
 figure > blockquote
     padding: (lineHeightComputed / 2)

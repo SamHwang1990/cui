@@ -1,6 +1,7 @@
-base = 2px
+use('../src/helpers/file-exist.js');
 
-@import '1'
+@import "3.styl"
 
-h1
-  font-size fontSize
+defaultGlobalSiteVariable = '../src/' + themesFolder + '/default/globals/site.variables.styl'
+
+@import defaultGlobalSiteVariable if file-exist(defaultGlobalSiteVariable)
