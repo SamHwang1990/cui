@@ -16,16 +16,16 @@ element = 'typo'
     1. font-face utility definitions
 --------------------*/
 .font-hei
-  font-family: 'CUI Sans', 'CUI HeiTi GB', sans-serif
+  font-family: ffSans(), ffHeiTi(), sans-serif
 
 .font-song
-  font-family: 'CUI Serif', 'CUI SongTi GB', serif
+  font-family: ffSerif(), ffSongTi(), serif
 
 .font-kai
-  font-family: 'CUI Serif', 'CUI KaiTi GB', serif
+  font-family: ffSerif(), ffKaiTi(), serif
 
 .font-fang-song
-  font-family: 'CUI Serif', 'CUI Fangsong GB', serif
+  font-family: ffSerif(), ffFangSong(), serif
 
 /*-------------------
     2. Element style reset
@@ -160,22 +160,6 @@ em
       overflow: hidden;
       white-space: nowrap;
       content: "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・";
-
-    // 支持text-emphasis 和text-emphasis-position 的情况下
-@supports(text-emphasis: filled circle) and (text-emphasis-position: under left)
-  em
-    +langZhPseudo()
-      font-style: inherit;
-      font-weight: inherit;
-      text-decoration: inherit;
-      text-emphasis: filled circle;
-      text-emphasis-position: under left;
-
-      &:after
-        content: ''
-        position: relative
-        width: 0;
-        height: 0
 
 q
   quotes: qQuoteEn
@@ -318,26 +302,26 @@ code,
 kbd,
 samp,
 pre
-  font-family: 'CUI Mono', 'CUI HeiTi GB', monospace, sans-serif
+  font-family: ffMono(), ffHeiTi(), monospace, sans-serif
 
 i,
 var
-  font-family: 'Biaodian Pro Serif', 'CUI Serif', 'CUI KaiTi GB', serif
+  font-family: ffSerif(), ffKaiTi(), serif
 
 .article
   strong
-    font-family: 'Biaodian Pro Sans', 'CUI Sans', 'CUI HeiTi GB', sans-serif
+    font-family: ffSans(), ffHeiTi(), sans-serif
 
   blockquote
-    font-family: 'Biaodian Pro Serif', 'CUI Serif', 'CUI KaiTi GB', serif
+    font-family: ffSerif(), ffKaiTi(), serif
 
     i,
     var
-      font-family: 'Biaodian Pro Sans', 'CUI Sans', 'CUI HeiTi GB', sans-serif
+      font-family: ffSans(), ffHeiTi(), sans-serif
 
 figure
   blockquote
-    font-family: 'Biaodian Pro Serif', 'CUI Serif', 'CUI SongTi GB', serif
+    font-family: ffSerif(), ffSongTi(), serif
 
 
 /*-------------------

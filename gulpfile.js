@@ -103,7 +103,7 @@ gulp.task('dist:css:minify',function() {
 });
 
 gulp.task('dist:css:lint', function() {
-  var srcGlb = 'dist/**/*.css';
+  var srcGlb = ['dist/**/*.css'];
 
   return gulp.src(srcGlb).pipe(csslint('src/.csslintrc')).pipe(csslint.reporter());
 });

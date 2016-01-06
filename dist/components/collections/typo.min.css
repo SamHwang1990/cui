@@ -4,27 +4,13 @@
  * Licensed under MIT (https://github.com/SamHwang1990/cui/blob/legacy/LICENSE)
  */
 a:focus,a:hover,ins,u{text-decoration:underline}
-@font-face{font-family:'Biaodian Pro Sans';src:local('Hiragino Sans GB'),local('Heiti SC'),local(STHeiti),local(SimSun);unicode-range:U+FF0E}
-@font-face{font-family:'Biaodian Pro Serif';src:local('Songti SC'),local(STSong),local(SimSun);unicode-range:U+FF0E}
-@font-face{font-family:'Biaodian Pro Sans';src:local('Hiragino Sans GB'),local('Heiti SC'),local(STHeiti),local(SimSun);unicode-range:U+00B7}
-@font-face{font-family:'Biaodian Pro Serif';src:local('Songti SC'),local(STSong),local('Heiti SC'),local(SimSun);unicode-range:U+00B7}
-@font-face{font-family:'Biaodian Pro Sans';src:local('Hiragino Sans GB'),local('Microsoft Yahei'),local(SimSun);unicode-range:U+2014}
-@font-face{font-family:'Biaodian Pro Serif';src:local('Hiragino Mincho ProN'),local('Hiragino Mincho Pro'),local('Songti SC'),local(STSong),local('Microsoft Yahei'),local(SimSun);unicode-range:U+2014}
-@font-face{font-family:'Biaodian Pro Sans';src:local('Hiragino Sans GB'),local(SimSun),local(PMingLiU);unicode-range:U+2026}
-@font-face{font-family:'Biaodian Pro Serif';src:local('Songti SC'),local(SimSun),local(PMingLiU);unicode-range:U+2026}
-@font-face{font-family:'CUI HeiTi GB';src:local('Hiragino Sans GB'),local('PingFang SC'),local('Lantinghei SC Extralight'),local(FZLTXHK--GBK1-0),local('Lantinghei SC'),local('Heiti SC'),local('Microsoft Yahei'),local('SimHei'),local('Source Han Sans SC'),local('Source Han Sans CN'),local('Wenquanyi Micro Hei'),local('WenQuanYi Zen Hei'),local('WenQuanYi Zen Hei Sharp'),local('Droid Sans Fallback'),local(sans-serif)}
-@font-face{font-family:'CUI SongTi GB';src:local('Songti SC Regular'),local(STSongti-SC-Regular),local('Songti SC'),local(STSong),local(NSimSun),local(SimSun),local('AR PL New Sung'),local('TW\-Sung'),local('WenQuanYi Bitmap Song'),local('AR PL UMing CN'),local('AR PL UMing HK'),local('AR PL UMing TW'),local('AR PL UMing TW MBE'),local(serif)}
-@font-face{font-family:'CUI KaiTi GB';src:local('Kaiti SC Regular'),local(STKaiTi-SC-Regular),local('Kaiti SC'),local(STKaiti),local(Kai),local(Kaiti),local(KaiTi_GB2312),local('AR PL UKai CN'),local('AR PL UKai HK'),local('AR PL UKai TW'),local('AR PL UKai TW MBE'),local('AR PL KaitiM GB'),local(DFKai-SB),local('TW\-Kai'),local(serif)}
-@font-face{font-family:'CUI Fangsong GB';src:local(STFangsong),local(FangSong),local(FangSong_GB2312),local('CWTEX\-F'),local(serif)}
-@font-face{font-family:'CUI Serif';src:local(Georgia),local('Times New Roman')}
-@font-face{font-family:'CUI Sans';src:local('Helvetica Neue'),local(Helvetica),local(Arial)}
-@font-face{font-family:'CUI Mono';src:local(Menlo),local(Consolas),local(Courier)}
-.font-hei,cite,em{font-family:'CUI Sans','CUI HeiTi GB',sans-serif}
-.font-song{font-family:'CUI Serif','CUI SongTi GB',serif}
-.font-kai{font-family:'CUI Serif','CUI KaiTi GB',serif}
-.font-fang-song{font-family:'CUI Serif','CUI Fangsong GB',serif}
+.font-hei,cite,em{font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","PingFang SC","Lantinghei SC Extralight",FZLTXHK--GBK1-0,"Lantinghei SC","Heiti SC","Microsoft Yahei",SimHei,"Source Han Sans SC","Source Han Sans CN","Wenquanyi Micro Hei","WenQuanYi Zen Hei","WenQuanYi Zen Hei Sharp","Droid Sans Fallback",sans-serif}
+.font-song{font-family:Georgia,"Times New Roman","Songti SC Regular",STSongti-SC-Regular,"Songti SC",STSong,NSimSun,SimSun,"AR PL New Sung","TW\-Sung","WenQuanYi Bitmap Song","AR PL UMing CN","AR PL UMing HK","AR PL UMing TW","AR PL UMing TW MBE",serif}
+.font-kai{font-family:Georgia,"Times New Roman","Kaiti SC Regular",STKaiTi-SC-Regular,"Kaiti SC",STKaiti,Kai,Kaiti,KaiTi_GB2312,"AR PL UKai CN","AR PL UKai HK","AR PL UKai TW","AR PL UKai TW MBE","AR PL KaitiM GB",DFKai-SB,"TW\-Kai",serif}
+.font-fang-song{font-family:Georgia,"Times New Roman",STFangsong,FangSong,FangSong_GB2312,"CWTEX\-F",serif}
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{padding:0;font-family:'Helvetica Neue',Helvetica,Tahoma,Arial,STXihei,"华文细黑","Microsoft YaHei","微软雅黑",SimSun,"宋体",Heiti,"黑体",sans-serif;font-weight:700;line-height:1.2857em;color:inherit}
 .h1 .small,.h1 small,.h2 .small,.h2 small,.h3 .small,.h3 small,.h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small{font-weight:400;line-height:1;color:#777}
+dt,kbd kbd{font-weight:700}
 dd,dt,p{line-height:1.4285em}
 .h1,h1{font-size:28px}
 .h2,h2{font-size:24px}
@@ -40,7 +26,6 @@ p,pre{margin:0 0 10px}
 ol,ul{margin-bottom:10px}
 ol ol,ol ul,ul ol,ul ul{margin-bottom:0}
 dl{margin-bottom:1.4285em}
-dt{font-weight:700}
 dd{margin-left:0}
 table{border-spacing:0;border-collapse:collapse}
 a{color:#4183c4;text-decoration:none}
@@ -51,9 +36,6 @@ cite,em{font-style:italic}
 cite:lang(zh),cite:lang(zh-CN){font-family:inherit;font-style:inherit}
 em:lang(zh),em:lang(zh-CN){position:relative}
 em:lang(zh):after,em:lang(zh-CN):after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・"}
-@supports (text-emphasis:filled circle) and (text-emphasis-position:under left){em:lang(zh),em:lang(zh-CN){font-style:inherit;font-weight:inherit;text-emphasis:filled circle;text-emphasis-position:under left;text-decoration:inherit}
-em:lang(zh):after,em:lang(zh-CN):after{position:relative;width:0;height:0;content:''}
-}
 q{quotes:"\201c" "\201d" "\2018" "\2019"}
 q:lang(zh),q:lang(zh-CN){quotes:"\300c" "\300d" "\300e" "\300f"}
 q:before{content:open-quote}
@@ -76,15 +58,15 @@ blockquote blockquote{padding:0 0 0 10px;border-left:none}
 code,kbd{padding:2px 4px;font-size:90%;border-radius:4px}
 code{color:#c7254e;background-color:#f9f2f4}
 kbd{color:#fff;background-color:#333;box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}
-kbd kbd{padding:0;font-size:100%;font-weight:700;border-radius:0;box-shadow:none}
+kbd kbd{padding:0;font-size:100%;border-radius:0;box-shadow:none}
 pre{display:block;padding:10px;font-size:13px;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc}
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
-code,kbd,pre,samp{font-family:'CUI Mono','CUI HeiTi GB',monospace,sans-serif}
-i,var{font-style:italic;font-family:'Biaodian Pro Serif','CUI Serif','CUI KaiTi GB',serif}
-.article strong{font-family:'Biaodian Pro Sans','CUI Sans','CUI HeiTi GB',sans-serif}
-.article blockquote{font-family:'Biaodian Pro Serif','CUI Serif','CUI KaiTi GB',serif}
-.article blockquote i,.article blockquote var{font-family:'Biaodian Pro Sans','CUI Sans','CUI HeiTi GB',sans-serif}
-figure blockquote{font-family:'Biaodian Pro Serif','CUI Serif','CUI SongTi GB',serif}
+code,kbd,pre,samp{font-family:Menlo,Consolas,Courier,"Hiragino Sans GB","PingFang SC","Lantinghei SC Extralight",FZLTXHK--GBK1-0,"Lantinghei SC","Heiti SC","Microsoft Yahei",SimHei,"Source Han Sans SC","Source Han Sans CN","Wenquanyi Micro Hei","WenQuanYi Zen Hei","WenQuanYi Zen Hei Sharp","Droid Sans Fallback",monospace,sans-serif}
+i,var{font-style:italic;font-family:Georgia,"Times New Roman","Kaiti SC Regular",STKaiTi-SC-Regular,"Kaiti SC",STKaiti,Kai,Kaiti,KaiTi_GB2312,"AR PL UKai CN","AR PL UKai HK","AR PL UKai TW","AR PL UKai TW MBE","AR PL KaitiM GB",DFKai-SB,"TW\-Kai",serif}
+.article strong{font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","PingFang SC","Lantinghei SC Extralight",FZLTXHK--GBK1-0,"Lantinghei SC","Heiti SC","Microsoft Yahei",SimHei,"Source Han Sans SC","Source Han Sans CN","Wenquanyi Micro Hei","WenQuanYi Zen Hei","WenQuanYi Zen Hei Sharp","Droid Sans Fallback",sans-serif}
+.article blockquote{font-family:Georgia,"Times New Roman","Kaiti SC Regular",STKaiTi-SC-Regular,"Kaiti SC",STKaiti,Kai,Kaiti,KaiTi_GB2312,"AR PL UKai CN","AR PL UKai HK","AR PL UKai TW","AR PL UKai TW MBE","AR PL KaitiM GB",DFKai-SB,"TW\-Kai",serif}
+.article blockquote i,.article blockquote var{font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","PingFang SC","Lantinghei SC Extralight",FZLTXHK--GBK1-0,"Lantinghei SC","Heiti SC","Microsoft Yahei",SimHei,"Source Han Sans SC","Source Han Sans CN","Wenquanyi Micro Hei","WenQuanYi Zen Hei","WenQuanYi Zen Hei Sharp","Droid Sans Fallback",sans-serif}
+figure blockquote{font-family:Georgia,"Times New Roman","Songti SC Regular",STSongti-SC-Regular,"Songti SC",STSong,NSimSun,SimSun,"AR PL New Sung","TW\-Sung","WenQuanYi Bitmap Song","AR PL UMing CN","AR PL UMing HK","AR PL UMing TW","AR PL UMing TW MBE",serif}
 .article{line-height:1.7}
 @media (max-width:767px){.article>blockquote{padding-left:10px}
 }

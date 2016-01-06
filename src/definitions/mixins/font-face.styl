@@ -1,207 +1,33 @@
 /*-------------------
     Font-Face Definitions
 --------------------*/
-// 中文标点,参考Han.css 的Biaodian Pro,简体繁体均适用
-
-// 单点全形句号修正(．)
-@font-face {
-  font-family: 'Biaodian Pro Sans';
-  src:
-    local('Hiragino Sans GB'),
-    local('Heiti SC'),
-    local(STHeiti),
-    local(SimSun);
-  unicode-range: U+FF0E;
-}
-
-@font-face {
-  font-family: 'Biaodian Pro Serif';
-  src:
-    local('Songti SC'),
-    local(STSong),
-    local(SimSun);
-  unicode-range: U+FF0E;
-}
-
-// 间隔号修正(·)为一汉字宽,多见于西文
-@font-face {
-  font-family: 'Biaodian Pro Sans';
-  src:
-    local('Hiragino Sans GB'),
-    local('Heiti SC'),
-    local(STHeiti),
-    local(SimSun);
-  unicode-range: U+00B7;
-}
-
-@font-face {
-  font-family: 'Biaodian Pro Serif';
-  src:
-    local('Songti SC'),
-    local(STSong),
-    local('Heiti SC'),
-    local(SimSun);
-  unicode-range: U+00B7;
-}
-
-// 破折号修正,相连时无间隔,单独适用时两侧不连字符(——)
-// todo: 与Han.css 不同,这里没有声明han.woff 字体,所以,可能并不会达到预期效果,需要仔细测试
-@font-face {
-  font-family: 'Biaodian Pro Sans';
-  src:
-    local('Hiragino Sans GB'),
-    local('Microsoft Yahei'),
-    local(SimSun);
-  unicode-range: U+2014;
-}
-
-@font-face {
-  font-family: 'Biaodian Pro Serif';
-  src:
-    local('Hiragino Mincho ProN'),
-    local('Hiragino Mincho Pro'),
-    local('Songti SC'),
-    local(STSong),
-    local('Microsoft Yahei'),
-    local(SimSun);
-  unicode-range: U+2014;
-}
-
-// 省略号修正,相连时居中,单独使用时沉底
-@font-face {
-  font-family: 'Biaodian Pro Sans';
-  src:
-    local('Hiragino Sans GB'),
-    local(SimSun),
-    local(PMingLiU);
-  unicode-range: U+2026;
-}
-
-@font-face {
-  font-family: 'Biaodian Pro Serif';
-  src:
-    local('Songti SC'),
-    local(SimSun),
-    local(PMingLiU);
-  unicode-range: U+2026;
-}
-
-
 // 中文字体,参考自Han.css Han Heiti GB,和fonts.css
 // 黑体
-@font-face {
-  font-family: 'CUI HeiTi GB';
-  src:
-    local('Hiragino Sans GB'),
-    local('PingFang SC'),
-    local('Lantinghei SC Extralight'),
-    local(FZLTXHK--GBK1-0),
-    local('Lantinghei SC'),
-    local('Heiti SC'),
-
-    local('Microsoft Yahei'),
-    local('SimHei'),
-
-    local('Source Han Sans SC'),
-    local('Source Han Sans CN'),
-
-    local('Wenquanyi Micro Hei'),
-    local('WenQuanYi Zen Hei'),
-    local('WenQuanYi Zen Hei Sharp'),
-
-    local('Droid Sans Fallback'),
-    local(sans-serif);
-}
+ffHeiTi()
+  unquote('"Hiragino Sans GB", "PingFang SC", "Lantinghei SC Extralight", FZLTXHK--GBK1-0, "Lantinghei SC", "Heiti SC", "Microsoft Yahei", "SimHei", "Source Han Sans SC", "Source Han Sans CN", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei Sharp", "Droid Sans Fallback"')
 
 // 宋体
-@font-face {
-  font-family: 'CUI SongTi GB';
-  src:
-    local('Songti SC Regular'),
-    local(STSongti-SC-Regular),
-    local('Songti SC'),
-    local(STSong),
-
-    local(NSimSun),
-    local(SimSun),
-
-    local('AR PL New Sung'),
-
-    local('TW\-Sung'),
-
-    local('WenQuanYi Bitmap Song'),
-    local('AR PL UMing CN'),
-    local('AR PL UMing HK'),
-    local('AR PL UMing TW'),
-    local('AR PL UMing TW MBE'),
-
-    local(serif);
-}
+ffSongTi()
+  unquote('"Songti SC Regular", STSongti-SC-Regular, "Songti SC", STSong, NSimSun, SimSun, "AR PL New Sung", "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE"')
 
 // 楷体
-@font-face {
-  font-family: 'CUI KaiTi GB';
-  src:
-    local('Kaiti SC Regular'),
-    local(STKaiTi-SC-Regular),
-    local('Kaiti SC'),
-    local(STKaiti),
-
-    local(Kai),
-    local(Kaiti),
-    local(KaiTi_GB2312),
-
-    local('AR PL UKai CN'),
-    local('AR PL UKai HK'),
-    local('AR PL UKai TW'),
-    local('AR PL UKai TW MBE'),
-
-    local('AR PL KaitiM GB'),
-
-    local(DFKai-SB),
-
-    local('TW\-Kai'),
-
-    local(serif);
-}
+ffKaiTi()
+  unquote('"Kaiti SC Regular", STKaiTi-SC-Regular, "Kaiti SC", STKaiti, Kai, Kaiti, KaiTi_GB2312, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", DFKai-SB, "TW\-Kai"')
 
 // 仿宋
-@font-face {
-  font-family: 'CUI Fangsong GB';
-  src:
-    local(STFangsong),
-    local(FangSong),
-    local(FangSong_GB2312),
-    local('CWTEX\-F'),
-
-    local(serif);
-}
-
+ffFangSong()
+  unquote('STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F"')
 
 // 西文字体
 
 // serif
-@font-face {
-  font-family: 'CUI Serif';
-  src:
-    local(Georgia),
-    local('Times New Roman')
-}
+ffSerif()
+  unquote('Georgia, "Times New Roman"')
 
 // san-serif
-@font-face {
-  font-family: 'CUI Sans';
-  src:
-    local('Helvetica Neue'),
-    local(Helvetica),
-    local(Arial)
-}
+ffSans()
+  unquote('"Helvetica Neue", Helvetica, Arial')
 
 // mono
-@font-face {
-  font-family: 'CUI Mono';
-  src:
-    local(Menlo),
-    local(Consolas),
-    local(Courier)
-}
+ffMono()
+  unquote('Menlo, Consolas, Courier')
