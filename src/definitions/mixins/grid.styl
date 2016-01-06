@@ -25,6 +25,14 @@ initGridColumn(gutter = gridGutterWidth)
     position relative
     // Prevent columns from collapsing when empty
     min-height 1px
+
+setGridColumnPadding(gutter = gridGutterWidth)
+  list = ''
+  for index in (1..columnCount)
+    list += ', ' if index > 1
+    list += '.col-xs-' + index + ', .col-sm-' + index + ', .col-md-' + index + ', .col-lg-' + index
+
+  {list}
     // Inner gutter via padding
     padding-left  (gutter / 2)
     padding-right (gutter / 2)

@@ -97,7 +97,7 @@ gulp.task('dist:css:minify',function() {
             .pipe(genBanner())
             .pipe(sourcemaps.init())
             .pipe(cssmin(miniConfig))
-            .pipe(sourcemaps.write())
+            .pipe(sourcemaps.write('.'))
             .pipe(rename({suffix: ".min"}))
             .pipe(gulp.dest(distPath));
 });
