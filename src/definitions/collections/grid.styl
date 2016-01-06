@@ -9,46 +9,44 @@ element = 'grid'
 
 @import '../mixins/grid.styl'
 
-.grid
-  initGridBox()
 
-  // init container element
-  .container
-    initGridContainer()
+// init container element
+.container
+  initGridContainer()
 
-    @media (min-width: breakpointMin['tablet'])
-      width gridContainerFixWidth['tablet']
-
-    @media (min-width: breakpointMin['desktop'])
-      width gridContainerFixWidth['desktop']
-
-    @media (min-width: breakpointMin['largeDesktop'])
-      width gridContainerFixWidth['largeDesktop']
-
-  .container-fluid
-    initGridContainer()
-
-
-  // init row
-  .row
-    initGridRow()
-
-  // init column common style
-  initGridColumn()
-
-  // make mobileScreen grid
-  makeGridColumnStyle(xs)
-
-  // make tabletScreen grid
   @media (min-width: breakpointMin['tablet'])
-    makeGridColumnStyle(sm)
+    width gridContainerFixWidth['tablet']
 
-  // make desktopScreen grid
   @media (min-width: breakpointMin['desktop'])
-    makeGridColumnStyle(md)
+    width gridContainerFixWidth['desktop']
 
-  // make largeDesktopScreen grid
   @media (min-width: breakpointMin['largeDesktop'])
-    makeGridColumnStyle(lg)
+    width gridContainerFixWidth['largeDesktop']
+
+.container-fluid
+  initGridContainer()
+
+
+// init row
+.row
+  initGridRow()
+
+// init column common style
+initGridColumn()
+
+// make mobileScreen grid
+makeGridColumnStyle(xs)
+
+// make tabletScreen grid
+@media (min-width: breakpointMin['tablet'])
+  makeGridColumnStyle(sm)
+
+// make desktopScreen grid
+@media (min-width: breakpointMin['desktop'])
+  makeGridColumnStyle(md)
+
+// make largeDesktopScreen grid
+@media (min-width: breakpointMin['largeDesktop'])
+  makeGridColumnStyle(lg)
 
 loadUIOverrides()
