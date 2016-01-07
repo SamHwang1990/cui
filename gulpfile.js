@@ -14,7 +14,7 @@ var runSequence = require('run-sequence');
 var stylus = require('gulp-stylus');
 var postcss = require('gulp-postcss');
 var csscomb = require('gulp-csscomb');
-var cssmin = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var csslint = require('gulp-csslint');
 
 var del = require('del');
@@ -96,7 +96,7 @@ gulp.task('dist:css:minify',function() {
   return gulp.src(srcGlob)
             .pipe(genBanner())
             .pipe(sourcemaps.init())
-            .pipe(cssmin(miniConfig))
+            .pipe(cssnano())
             .pipe(sourcemaps.write('.'))
             .pipe(rename({suffix: ".min"}))
             .pipe(gulp.dest(distPath));

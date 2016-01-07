@@ -2,16 +2,5 @@
  * CUI v0.0.1 (https://github.com/SamHwang1990/cui#readme)
  * Copyright 2015-2016 Sam Hwang <samhwang1990@gmail.com>
  * Licensed under MIT (https://github.com/SamHwang1990/cui/blob/legacy/LICENSE)
- */
-body,html{font-size:14px}
-body,figure{margin:0}
-*,:after,:before{box-sizing:border-box}
-body,html{height:100%}
-body{padding:0;overflow-x:hidden;font-family:'Helvetica Neue',Helvetica,Tahoma,Arial,STXihei,"华文细黑","Microsoft YaHei","微软雅黑",SimSun,"宋体",Heiti,"黑体",sans-serif;line-height:1.4285em;color:#1b1c1d;background-color:#fff}
-button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
-hr{margin-top:19px;margin-bottom:19px;border:0;border-top:1px solid hrBorder}
-::-webkit-selection{color:#1b1c1d;background-color:#cce2ff}
-::selection{color:#1b1c1d;background-color:#cce2ff}
-input::-webkit-selection,textarea::-webkit-selection{color:#1b1c1d;background-color:#646464}
-input::selection,textarea::selection{color:#1b1c1d;background-color:#646464}
+ */*,:after,:before{box-sizing:border-box}body,html{height:100%}body,html{font-size:14px}body{padding:0;margin:0;overflow-x:hidden;font-family:Helvetica Neue,Helvetica,Tahoma,Arial,STXihei,华文细黑,Microsoft YaHei,微软雅黑,SimSun,宋体,Heiti,黑体,sans-serif;line-height:1.4285em;color:#1b1c1d;background-color:#fff}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}hr{margin-top:19px;margin-bottom:19px;border:0;border-top:1px solid hrBorder}figure{margin:0}::-webkit-selection{color:#1b1c1d;background-color:#cce2ff}::selection{color:#1b1c1d;background-color:#cce2ff}input::-webkit-selection,textarea::-webkit-selection{color:#1b1c1d;background-color:#646464}input::selection,textarea::selection{color:#1b1c1d;background-color:#646464}
 /*# sourceMappingURL=site.css.map */

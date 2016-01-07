@@ -2,14 +2,5 @@
  * CUI v0.0.1 (https://github.com/SamHwang1990/cui#readme)
  * Copyright 2015-2016 Sam Hwang <samhwang1990@gmail.com>
  * Licensed under MIT (https://github.com/SamHwang1990/cui/blob/legacy/LICENSE)
- */
-.clearfix:after,.clearfix:before{display:table;content:" "}
-.clearfix:after{clear:both}
-.pull-right{float:right!important}
-.pull-left{float:left!important}
-.invisible{visibility:hidden}
-.hidden{display:none!important}
-.show{display:block!important}
-.sr-only,.sr-only-focusable{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
+ */.clearfix:after,.clearfix:before{display:table;content:" "}.clearfix:after{clear:both}.pull-right{float:right!important}.pull-left{float:left!important}.invisible{visibility:hidden}.hidden{display:none!important}.show{display:block!important}.sr-only,.sr-only-focusable{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
 /*# sourceMappingURL=utililties.css.map */

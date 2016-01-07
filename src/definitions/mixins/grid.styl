@@ -52,25 +52,29 @@ calcGridColumnWith(breakpoingClass)
       width (index / columnCount * 100%)
 
 calcGridColumnOffset(breakpoingClass)
-  for index in (1..columnCount)
+  for index in (0..columnCount)
     {'.col-' + breakpoingClass + '-offset-' + index}
-      margin-left (index / columnCount * 100%)
+      if index > 0
+        margin-left (index / columnCount * 100%)
+      else
+        margin-left auto
+
 
 calcGridColumnPush(breakpoingClass)
-  {'.col-' + breakpoingClass + '-push-0'}
-    left auto
-
-  for index in (1..columnCount)
+  for index in (0..columnCount)
     {'.col-' + breakpoingClass + '-push-' + index}
-      left (index / columnCount * 100%)
+      if index > 0
+        left (index / columnCount * 100%)
+      else
+        left auto
 
 calcGridColumnPull(breakpoingClass)
-  {'.col-' + breakpoingClass + '-push-0'}
-    right auto
-
-  for index in (1..columnCount)
+  for index in (0..columnCount)
     {'.col-' + breakpoingClass + '-pull-' + index}
-      right (index / columnCount * 100%)
+      if index > 0
+        right (index / columnCount * 100%)
+      else
+        right auto
 
 makeGridColumnStyle(breakpointClass)
   floatGridColumn(breakpointClass)
