@@ -7,15 +7,16 @@ var header = require('gulp-header');
 
 var sourcemaps = require('gulp-sourcemaps');
 
-var autoprefix = require('autoprefixer');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 
 var stylus = require('gulp-stylus');
 var postcss = require('gulp-postcss');
 var csscomb = require('gulp-csscomb');
-var cssnano = require('gulp-cssnano');
 var csslint = require('gulp-csslint');
+var cssnano = require('gulp-cssnano');
+
+var autoprefix = require('autoprefixer');
 
 var del = require('del');
 
@@ -87,16 +88,14 @@ gulp.task('dist:css:comb', function() {
 gulp.task('dist:css:minify',function() {
   var srcGlob = ['dist/**/*.css', '!dist/**/*.min.css'];
   var distPath = 'dist';
-  var miniConfig = {
-    keepBreaks: true,
-    aggressiveMerging: false,
-    compatibility: 'ie8'   // check this out: https://github.com/jakubpawlowicz/clean-css/blob/master/lib/utils/compatibility.js
+  var nanoConfig = {
+    safe: true
   };
 
   return gulp.src(srcGlob)
             .pipe(genBanner())
             .pipe(sourcemaps.init())
-            .pipe(cssnano())
+            .pipe(cssnano(nanoConfig))
             .pipe(sourcemaps.write('.'))
             .pipe(rename({suffix: ".min"}))
             .pipe(gulp.dest(distPath));
