@@ -9,6 +9,12 @@
 /*-------------------
     1. font-face utility definitions
 --------------------*/
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.font-sans {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .font-hei,
 em,
 cite {
@@ -22,6 +28,9 @@ cite {
 }
 .font-fang-song {
   font-family: Georgia, "Times New Roman", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
+}
+.font-mono {
+  font-family: Menlo, Consolas, Courier, sans-serif;
 }
 /*-------------------
     2. Element style reset
@@ -353,7 +362,7 @@ pre code {
   padding: 0;
   font-size: inherit;
   color: inherit;
-  white-space: pre-wrap;
+  white-space: pre;
   background-color: transparent;
   border-radius: 0;
 }
@@ -361,9 +370,6 @@ i,
 var {
   font-style: italic;
 }
-/*-------------------
-    3. Hanzi font-family definitions
---------------------*/
 code,
 kbd,
 samp,
@@ -387,9 +393,6 @@ var {
 figure blockquote {
   font-family: Georgia, "Times New Roman", "Songti SC Regular", STSongti-SC-Regular, "Songti SC", STSong, NSimSun, SimSun, "AR PL New Sung", "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", serif;
 }
-/*-------------------
-    4. .article class definitions
---------------------*/
 .article {
   line-height: 1.7;
 }

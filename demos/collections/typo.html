@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CUI Typo</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/cui.css">
+    <style>
+
+    </style>
+</head>
+<body>
+	<div class="container">
+		<h1>CUI 中文字体与排版系统</h1>
+
+		<h2>字体</h2>
+
+		<h3>中文字体解决方案</h3>
+		<p>CUI 使用以下字体声明来为英文字体与中文字体全局性的提供更好的兼容度以及美观程度：</p>
+		<pre>font-family: 'Helvetica Neue', Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;</pre>
+
+		<h3>字体辅助Class</h3>
+
+		<h4>西文字体辅助Class</h4>
+		<p>根据西文字体常见分类：衬线（serif）、非衬线（sans-serif），CUI 提供下面两个字体声明作为辅助Class：</p>
+		<pre><code>.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.font-sans {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}</code></pre>
+
+		<h4>等宽字体辅助Class</h4>
+		<p>CUI 提供了一个等宽字体的辅助Class，这种字体多见于代码字体或计算机的输出文字所用：</p>
+		<pre><code>.font-mono {
+  font-family: Menlo, Consolas, Courier, sans-serif;
+}</code></pre>
+
+		<h4>中文字体辅助Class</h4>
+		<p>针对Web 上常用的四种字体：
+			<b>黑体</b>、<b>宋体</b>、<b>楷体</b>、<b>仿宋</b>，CUI 提供了相应的兼容全平台（OSX、Windows、Linux）的辅助Class：</p>
+		<pre><code>.font-hei{
+  font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Hiragino Sans GB&quot;, &quot;PingFang SC&quot;, &quot;Lantinghei SC Extralight&quot;, FZLTXHK--GBK1-0, &quot;Lantinghei SC&quot;, &quot;Heiti SC&quot;, &quot;Microsoft Yahei&quot;, &quot;SimHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Source Han Sans CN&quot;, &quot;Wenquanyi Micro Hei&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Zen Hei Sharp&quot;, &quot;Droid Sans Fallback&quot;, sans-serif;
+}
+.font-song {
+  font-family: Georgia, &quot;Times New Roman&quot;, &quot;Songti SC Regular&quot;, STSongti-SC-Regular, &quot;Songti SC&quot;, STSong, NSimSun, SimSun, &quot;AR PL New Sung&quot;, &quot;TW\-Sung&quot;, &quot;WenQuanYi Bitmap Song&quot;, &quot;AR PL UMing CN&quot;, &quot;AR PL UMing HK&quot;, &quot;AR PL UMing TW&quot;, &quot;AR PL UMing TW MBE&quot;, serif;
+}
+.font-kai {
+  font-family: Georgia, &quot;Times New Roman&quot;, &quot;Kaiti SC Regular&quot;, STKaiTi-SC-Regular, &quot;Kaiti SC&quot;, STKaiti, Kai, Kaiti, KaiTi_GB2312, &quot;AR PL UKai CN&quot;, &quot;AR PL UKai HK&quot;, &quot;AR PL UKai TW&quot;, &quot;AR PL UKai TW MBE&quot;, &quot;AR PL KaitiM GB&quot;, DFKai-SB, &quot;TW\-Kai&quot;, serif;
+}
+.font-fang-song {
+  font-family: Georgia, &quot;Times New Roman&quot;, STFangsong, FangSong, FangSong_GB2312, &quot;CWTEX\-F&quot;, serif;
+}</code></pre>
+
+		<p>注意：以上中文字体所使用的字体声明中，根据字体所属的衬线类别，分别使用了与上面西文字体辅助Class 一样的字体声明顺序来兼容中文字体中可能出现的衬线、非衬线西文字体。</p>
+
+		<h2>标题：h1~h6</h2>
+
+		<h2>页面主体：body & p</h2>
+
+		<h2>列表</h2>
+
+		<h2>表格</h2>
+
+        <h2>地址信息</h2>
+
+        <h2>行内元素</h2>
+
+        <h2>引用块</h2>
+
+        <h2>代码</h2>
+
+        <h2>排版辅助Class</h2>
+
+	</div>
+</body>
+</html>
