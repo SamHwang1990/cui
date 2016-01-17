@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CUI Grid System</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/cui.css">
+    <style>
+        .row {
+            margin-bottom: 20px;
+        }
+        .row .row {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        [class*='col-'] {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #eee;
+            background-color: rgba(86,61,124,.15);
+            border: 1px solid #ddd;
+            border: 1px solid rgba(86,61,124,.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>栅格系统例子</h1>
+    <p>
+        CUI Grid 为十二列的栅格系统，也就是，一个<code>.row</code>被分为十二列，使用<code>.col-[type]-[num]</code>来代表每一列，如果相同type 的列数量小于等于12，则一行可以容纳下，不需要换行。
+    </p>
+    <p>
+        注意，在CUI Grid 中，对上面提到的列（col）的理解，应该更为宽泛一些，
+        形如<code>.col-[type]-offset-[num]</code>、<code>.col-[type]-push-[num]</code>、<code>.col-[type]-pull-[num]</code>等，也跟列一样有占位的效果，
+        所以，在计算一行中的列数量时，也应当计算入内。
+    </p>
+    <hr/>
+
+    <h2>基本应用</h2>
+    <p>
+        本节使用<code>.col-md-*</code>来展示栅格系统的基本使用方法。
+    </p>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-2">.col-md-2</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">.col-md-7</div>
+        <div class="col-md-5">.col-md-5</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-5">.col-md-5</div>
+    </div>
+
+    <h2>嵌套column</h2>
+    <p>
+        本节使用<code>.col-md-*</code>来展示栅格系统嵌套column 的使用方法。
+    </p>
+    <div class="row">
+        <div class="col-md-8">
+            .col-md-8
+            <div class="row">
+                <div class="col-md-3">.col-md-3</div>
+                <div class="col-md-6">.col-md-6</div>
+                <div class="col-md-3">.col-md-3</div>
+            </div>
+        </div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h2>混合媒体查询类型column</h2>
+    <p>
+        本节主要展示混合使用不同媒体查询类型的column，尝试使用不同分辨率的浏览器来查看效果。
+    </p>
+
+    <h3>手机尺寸与PC尺寸混合</h3>
+    <div class="row">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-8">.col-xs-6 .col-md-8</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <h3>手机尺寸，平板尺寸与PC尺寸混合</h3>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-5">.col-xs-6 .col-sm-3 .col-md-5</div>
+        <div class="col-xs-6 col-md-7">.col-xs-6 .col-md-7</div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+
+
+    <h2>使用.clearfix 实现非环绕不等高column</h2>
+    <p>
+        本节主要用于展示非等高column 在受<code>float:left</code>影响导致换行时出现的环绕现象以及演示如何消除这种环绕.
+    </p>
+
+    <h3>不使用.clearfix 出现环绕现象</h3>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            .col-xs-6 .col-sm-3<br/>
+            尝试缩放到手机屏幕的尺寸，或者直接用手机来浏览这块的内容，可以看到什么叫环绕现象~~~
+        </div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    </div>
+
+    <h3>使用.clearfix，消除环绕现象</h3>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <p>.col-xs-6 .col-sm-3</p>
+            <p>在要换行的地方手动添加<code>.clearfix</code>来消除环绕</p>
+            <p>比如，在xs(宽度<768px) 屏幕尺寸下，下面第三个<code>.col-xs-6</code>会出现换行，所以，就要在那个位置添加clearfix</p>
+            <p>尝试缩放到手机屏幕的尺寸，来看看取消环绕现象后的效果。</p>
+        </div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        <div class="clearfix"></div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    </div>
+
+    <h2>offset、push、pull 应用</h2>
+    <p>
+        本节通过使用
+        <code>.col-md-offset-*</code>、<code>.col-md-pull-*</code>、<code>.col-md-push-*</code>
+        来展示如何手动调整column 之间的间隔和左右位置
+    </p>
+
+    <h3>offset 调整间隔</h3>
+    <p>offset 通过控制<code>margin-left</code>来控制column 之间的间隔</p>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+        <div class="col-md-3">.col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-1">.col-md-4 .col-md-offset-1</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-5">.col-sm-6 .col-md-5</div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-7 col-lg-offset-0">
+            .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-7 .col-lg-offset-0
+        </div>
+        <div class="col-sm-6">.col-sm-6</div>
+    </div>
+
+    <h3>push 调整位置</h3>
+    <p>push 通过控制<code>left</code>值来控制column 相对原位置向右偏移的距离</p>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-push-4">
+            .col-md-4 .col-md-push-4<br/>
+            注意,这层会与下一层出现重叠
+        </div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h3>pull 调整位置</h3>
+    <p>pull 通过控制<code>right</code>值来控制column 相对原位置向左偏移的距离</p>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-pull-4">
+            .col-md-4 .col-md-pull-4<br/>
+            注意,这层会与上一层出现重叠
+        </div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+</div>
+
+
+</body>
+</html>

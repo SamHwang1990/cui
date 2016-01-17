@@ -1,2 +1,2 @@
-# examples
+# Demos
 CUI demo pages.
