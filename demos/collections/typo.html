@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>CUI Typo</title>
     <link rel="stylesheet" type="text/css" href="../../dist/cui.css">
-    <link rel="stylesheet" type="text/css" href="../assets/style/demo.css">
+    <link rel="stylesheet" type="text/css" href="../assets/style/demo.css" charset="UTF-8">
     <style>
         table {
             width: 100%;
@@ -51,7 +51,7 @@
 
 		<h4>中文字体辅助Class</h4>
 		<p>针对Web 上常用的四种中文字体：
-			<b>黑体</b>、<b>宋体</b>、<b>楷体</b>、<b>仿宋</b>，CUI 提供了相应的兼容全平台（OSX、Windows、Linux）的辅助Class：</p>
+			<strong>黑体</strong>、<strong>宋体</strong>、<strong>楷体</strong>、<strong>仿宋</strong>，CUI 提供了相应的兼容全平台（OSX、Windows、Linux）的辅助Class：</p>
 		<pre><code>.font-hei{
   font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Hiragino Sans GB&quot;, &quot;PingFang SC&quot;, &quot;Lantinghei SC Extralight&quot;, FZLTXHK--GBK1-0, &quot;Lantinghei SC&quot;, &quot;Heiti SC&quot;, &quot;Microsoft Yahei&quot;, &quot;SimHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Source Han Sans CN&quot;, &quot;Wenquanyi Micro Hei&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Zen Hei Sharp&quot;, &quot;Droid Sans Fallback&quot;, sans-serif;
 }
@@ -107,9 +107,62 @@
 &#x3C;h6&#x3E;h6. CUI heading&#x3C;/h6&#x3E;</code></pre>
 		</div>
 
-
+        <div class="cui-demo-example">
+            <table>
+                <tbody>
+                <tr>
+                    <td><h1>h1 标题1 <small>副标题</small></h1></td>
+                </tr>
+                <tr>
+                    <td><h2>h2 标题2 <small>副标题</small></h2></td>
+                </tr>
+                <tr>
+                    <td><h3>h3 标题3 <small>副标题</small></h3></td>
+                </tr>
+                <tr>
+                    <td><h4>h4 标题4 <small>副标题</small></h4></td>
+                </tr>
+                <tr>
+                    <td><h5>h5 标题5 <small>副标题</small></h5></td>
+                </tr>
+                <tr>
+                    <td><h6>h6 标题6 <small>副标题</small></h6></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cui-demo-highlight">
+			<pre><code>&#x3C;h1&#x3E;h1. CUI heading &#x3C;small&#x3E;副标题&#x3C;/small&#x3E;&#x3C;/h1&#x3E;
+&#x3C;h2&#x3E;h2. CUI heading &#x3C;small&#x3E;副标题&#x3C;/small&#x3E;&#x3C;/h2&#x3E;
+&#x3C;h3&#x3E;h3. CUI heading &#x3C;small&#x3E;副标题&#x3C;/small&#x3E;&#x3C;/h3&#x3E;
+&#x3C;h4&#x3E;h4. CUI heading &#x3C;small&#x3E;副标题&#x3C;/small&#x3E;&#x3C;/h4&#x3E;
+&#x3C;h5&#x3E;h5. CUI heading &#x3C;small&#x3E;副标题&#x3C;/small&#x3E;&#x3C;/h5&#x3E;
+&#x3C;h6&#x3E;h6. CUI heading &#x3C;small&#x3E;副标题&#x3C;/small&#x3E;&#x3C;/h6&#x3E;</code></pre>
+        </div>
 
 		<h2>页面主体：body & p</h2>
+        <p>
+            CUI 将全局 <code>font-size</code> 设置为 <strong>14px</strong>，<code>line-height</code> 设置为 <strong>1.428</strong>。
+            这些属性直接赋予 <code>&lt;body&gt;</code> 元素以及继承body 样式的元素。
+            另外，<code>&lt;p&gt;</code> （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。
+        </p>
+        <div class="cui-demo-example">
+            <h3>中文排版</h3>
+            <p>计算机中最基本的描述状态的概念是位，取值只能是0和1，然后通过不同的位的组合来达到存储数据，表达数据的作用，其中，“位”又有一个称呼叫做“比特”。而在存储和处理数据时，普遍使用8个比特作为最小的存储和处理单元，而这8个比特组成的单元称为字节。</p>
+            <p>ASCII 字符集是由美国国家标准协会ANSI 指定的标准，旨在规定常用字符的集合以及每个字符对应的编码，并以此希望统一字符-字节的对应关系，避免同一段字节在不同计算机显示出来的字符不一致的问题。</p>
+            <p>ASCII 字符集使用一个字节来包含95个可打印字符（0x20-0x7E）和33个控制字符（0x00-0x19、0x7F），总共128 个字符，而这128个字符（2的7次方，对应的编码十六进制区段是：0x00-0x7F）占用了一个字节的后7位。也正因为这个原因，ASCII 规定最前面的1位统一定为0，只允许使用最后的7位来对应字符。</p>
+
+            <h3>英文排版</h3>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div class="cui-demo-highlight">
+            &#x3C;p&#x3E;...&#x3C;/p&#x3E;
+        </div>
 
 		<h2>列表</h2>
 
