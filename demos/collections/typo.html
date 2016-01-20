@@ -170,8 +170,8 @@
 
         <h2>地址信息</h2>
         <p>
-        	CUI 没有`address`元素下地址信息的样式进行过多限制，
-        	只是添加`20px`的下边距。使用`&#x3C;br/&#x3E;`换行。
+        	CUI 没有对<code>address</code>元素下地址信息的样式进行过多限制，
+        	只是添加<code>20px</code>的下边距。使用<code>&#x3C;br/&#x3E;</code>换行。
         </p>
         <div class="cui-demo-example">
             <address>
@@ -202,7 +202,7 @@
 
         <h2>超链接</h2>
         <p>
-            &#x3C;a/&#x3E; 默认下无下划线，<code>hover</code>、<code>focus</code>时提供下划线。
+            <code>&#x3C;a/&#x3E;</code> 默认下无下划线，<code>hover</code>、<code>focus</code>时提供下划线。
         </p>
         <div class="cui-demo-example">
             <a href="javascript:void(0);" title="a link">我是一个超链接。</a>
@@ -212,8 +212,9 @@
         </div>
 
         <h2>强调语义</h2>
-        <p>对于语气加重，需要读者多留意的文本使用&#x3C;em&#x3E;元素，仅为样式上的强调</p>
-        <p>中文字下标点强调，西文子斜体。</p>
+        <p>对于语气加重，需要读者多留意的文本使用<code>&#x3C;em&#x3E;</code>元素，仅为样式上的强调。</p>
+        <p>默认<code>font-style</code>为斜体，<code>font-family</code>使用非衬线体、黑体。</p>
+        <p>显式声明属性<code>lang="zh"</code>或<code>lang="zh-CN"</code>时，<code>font-style</code>、<code>font-family</code>都继承父元素。</p>
         <div class="cui-demo-example">
             <h3>中文排版</h3>
             <p>
@@ -225,20 +226,54 @@
             </p>
         </div>
         <div class="cui-demo-highlight">
-            <pre><code>
-字符编码对每个程序员来说，都应该是必须了解的，因为字符编码、解码时出现问题，可能引起一些非预期的行为，比如&#x3C;em lang="zh"&#x3E;乱码、代码执行错误&#x3C;/em&#x3E;等等。
+            <pre><code>&#x3C;em lang="zh"&#x3E;乱码、代码执行错误&#x3C;/em&#x3E;
 
-You can use &#x3C;em&#x3E;em tag&#x3C;/em&#x3E; to emphasize text just on style.
-            </code></pre>
+&#x3C;em&#x3E;em tag&#x3C;/em&#x3E;</code></pre>
         </div>
 
-
         <h2>重点语义</h2>
-
+        <p>凸显文字的重要，使用<code>&#x3C;strong&#x3E;</code>，起语义和样式上的强调作用。</p>
+        <div class="cui-demo-example">
+        	<p>
+                <strong>字符编码对每个程序员来说，都应该是必须了解的</strong>，因为字符编码、解码时出现问题，可能引起一些非预期的行为，比如<em lang="zh">乱码、代码执行错误</em>等等。
+            </p>
+        </div>
+        <div class="cui-demo-highlight">
+        	<pre><code>&#x3C;strong&#x3E;字符编码对每个程序员来说，都应该是必须了解的&#x3C;/strong&#x3E;</code></pre>
+        </div>
+        
         <h2>术语定义</h2>
+        <p>定义术语、词汇使用<code>&#x3C;dfn&#x3E;</code></p>
+        <p>默认<code>font-style</code>为斜体。</p>
+        <p>显式声明属性<code>lang="zh"</code>或<code>lang="zh-CN"</code>时，文本非斜体，加粗显示。</p>
+        <div class="cui-demo-example">
+            <h3>中文排版</h3>
+            <p>
+                <dfn lang="zh">BMP</dfn>：基本平面，Unicode Code Point处于U+0000 - U+FFFF之间的字符。
+            </p>
+            <h3>西文排版</h3>
+            <p>
+                <dfn>BMP</dfn>: Basic Multilingual Plane, Unicode Code Point between U+0000 and U+FFFF.
+            </p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;dfn lang="zh"&#x3E;BMP&#x3C;/dfn&#x3E;
+
+&#x3C;dfn&#x3E;BMP&#x3C;/dfn&#x3E;</code></pre>
+        </div>
 
         <h2>关键字高亮</h2>
-       
+        <p>高亮单词或短语使用<code>&#x3C;b&#x3E;</code>，与<code>&#x3C;strong&#x3E;</code>类似，但仅有样式上的强调作用。</p>
+        <div class="cui-demo-example">
+            <p>
+                Unicode 以<b>平面</b>为单位定义字符，每个平面可以存放65536个（两个字节长度，2的16次方）字符。
+                目前，一共有17个平面（2的5次方），即Unicode 字符集当前包含有2的21 次方个字符。
+            </p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>Unicode 以&#x3C;b&#x3E;平面&#x3C;/b&#x3E;为单位定义字符</code></pre>
+        </div>
+
         <h2>引用来源</h2>
 
         <h2>行内引用</h2>
