@@ -205,7 +205,9 @@ em,
 cite {
   font-style: italic;
 }
+em:lang(zh),
 cite:lang(zh),
+em:lang(zh-CN),
 cite:lang(zh-CN) {
   font-family: inherit;
   font-style: inherit;

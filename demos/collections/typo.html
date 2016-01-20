@@ -201,8 +201,37 @@
         </div>
 
         <h2>超链接</h2>
+        <p>
+            &#x3C;a/&#x3E; 默认下无下划线，<code>hover</code>、<code>focus</code>时提供下划线。
+        </p>
+        <div class="cui-demo-example">
+            <a href="javascript:void(0);" title="a link">我是一个超链接。</a>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;a href=&#x22;javascript:void(0);&#x22; title=&#x22;a link&#x22;&#x3E;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x8D85;&#x94FE;&#x63A5;&#x3002;&#x3C;/a&#x3E;</code></pre>
+        </div>
 
         <h2>强调语义</h2>
+        <p>对于语气加重，需要读者多留意的文本使用&#x3C;em&#x3E;元素，仅为样式上的强调</p>
+        <p>中文字下标点强调，西文子斜体。</p>
+        <div class="cui-demo-example">
+            <h3>中文排版</h3>
+            <p>
+                字符编码对每个程序员来说，都应该是必须了解的，因为字符编码、解码时出现问题，可能引起一些非预期的行为，比如<em lang="zh">乱码、代码执行错误</em>等等。
+            </p>
+            <h3>西文排版</h3>
+            <p>
+                You can use <em>em tag</em> to emphasize text just on style.
+            </p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>
+字符编码对每个程序员来说，都应该是必须了解的，因为字符编码、解码时出现问题，可能引起一些非预期的行为，比如&#x3C;em lang="zh"&#x3E;乱码、代码执行错误&#x3C;/em&#x3E;等等。
+
+You can use &#x3C;em&#x3E;em tag&#x3C;/em&#x3E; to emphasize text just on style.
+            </code></pre>
+        </div>
+
 
         <h2>重点语义</h2>
 
