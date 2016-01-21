@@ -275,8 +275,49 @@
         </div>
 
         <h2>引用来源</h2>
+        <p>引用来源使用<code>&#x3C;cite&#x3E;</code>元素。</p>
+        <p>默认<code>font-style</code>为斜体，<code>font-family</code>使用非衬线体、黑体。</p>
+        <p>显式声明属性<code>lang="zh"</code>或<code>lang="zh-CN"</code>时，<code>font-style</code>、<code>font-family</code>都继承父元素。</p>
+        <div class="cui-demo-example">
+            <h3>中文排版</h3>
+            <p>
+                <cite lang="zh">《字符编码笔记》</cite>详细讲解了Unicode 字符编码的相关细节。
+            </p>
+            <h3>西文排版</h3>
+            <p>
+                <cite>Webster Dictionary</cite> defines ‘marriage’ as…
+            </p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;cite lang="zh"&#x3E;《字符编码笔记》&#x3C;/cite&#x3E;详细讲解了Unicode 字符编码的相关细节。
+
+&#x3C;cite&#x3E;Webster Dictionary&#x3C;/cite&#x3E; defines ‘marriage’ as…</code></pre>
+        </div>
 
         <h2>行内引用</h2>
+        <p>行内引用<code>&#x3C;q&#x3E;</code>元素，依语言及地区属性采用相应的内外引号，以突显引用文本的结构</p>
+        <p>默认使用双引号<code>“ ”</code>包含文本。</p>
+        <p>显式声明属性<code>lang="zh"</code>或<code>lang="zh-CN"</code>时，使用双引号<code>「 」</code>包含文本。</p>
+        <div class="cui-demo-example">
+            <h3>中文排版</h3>
+            <p>
+                <cite lang="zh">字符编码笔记</cite>：
+                <q lang="zh">计算机中最基本的描述状态的概念是位，取值只能是0和1，
+                然后通过不同的位的组合来达到存储数据，表达数据的作用，
+                其中，“位”又有一个称呼叫做“比特”。
+                而在存储和处理数据时，普遍使用8个比特作为最小的存储和处理单元，而这8个比特组成的单元称为字节。</q>
+            </p>
+            <h3>西文排版</h3>
+            <p>
+                <cite>Someone famous in Source Title</cite>: <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</q>
+            </p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;cite lang="zh"&#x3E;字符编码笔记&#x3C;/cite&#x3E;：&#x3C;q lang="zh"&#x3E;计算机中最基本的描述状态的概念是位，取值只能是0和1，然后通过不同的位的组合来达到存储数据，表达数据的作用，其中，“位”又有一个称呼叫做“比特”。而在存储和处理数据时，普遍使用8个比特作为最小的存储和处理单元，而这8个比特组成的单元称为字节。&#x3C;/q&#x3E;
+
+&#x3C;cite&#x3E;Someone famous in Source Title&#x3C;/cite&#x3E;: &#x3C;q&#x3E;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&#x3C;/q&#x3E;</code></pre>
+        </div>
+
 
         <h2>标注文本</h2>
         
