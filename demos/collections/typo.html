@@ -319,13 +319,48 @@
         </div>
 
 
-        <h2>标注文本</h2>
+        <h2>下划线标注文本</h2>
+        <p>为文本添加下划线，使用<code>&#x3C;u&#x3E;</code>元素。</p>
+        <div class="cui-demo-example">
+            <p>Javascript 源码支持<u>UTF-16</u> 编码，解析引擎总会尝试将源码字符串转成UTF-16 编码；</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>Javascript 源码支持&#x3C;u&#x3E;UTF-16&#x3C;/u&#x3E; 编码</code></pre>
+        </div>
         
         <h2>增订文本</h2>
+        <p>额外插入的文本，比如版本增订的内容，使用<code>&#x3C;ins&#x3E;</code>元素。</p>
+        <blockquote>
+            <p>
+                提示：「注记u元素」虽有明确的样式，用于避免文字上的争议，但并不改变文本的本来意义，常有表示专名（中文专名号）或原、引文的拼写错误等用途；而「增订ins元素」表示相应文本在版本修改、增订间的记录。
+            </p>
+            <cite lang="zh"><a href="https://css.hanzi.co/manual/yangshi_biaozhunhua#wenzi_zhuangshixian" title="注记与增订元素"> 《漢字標準格式》</a></cite>
+        </blockquote>
+
+        <div class="cui-demo-example">
+            <p><ins>本行的文本将会被增订到文档中内容中。</ins></p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;ins&#x3E;本行的文本将会被增订到文档中内容中。&#x3C;/ins&#x3E;</code></pre>
+        </div>
 
         <h2>讹传文字</h2>
+        <p>讹传文字，用于表明错误或不再正确的资讯、内容，使用<code>&#x3C;s&#x3E;</code>元素。</p>
+        <div class="cui-demo-example">
+            <p>勒布朗詹姆斯是<s>世界上最</s>好的球员。</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>勒布朗詹姆斯是&#x3C;s&#x3E;世界上最&#x3C;/s&#x3E;好的球员。</code></pre>
+        </div>
         
         <h2>删订文本</h2>
+        <p>被删除的文本，比如版本修改、删订间的记录，使用<code>&#x3C;del&#x3E;</code>元素。</p>
+        <div class="cui-demo-example">
+            <p>太阳系内有9<del>8</del>颗行星，分别是：水星、金星、地球、火星、木星、土星、天王星、海王星<del>、冥王星</del>。</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>太阳系内有9&#x3C;del&#x3E;8&#x3C;/del&#x3E;颗行星，分别是：水星、金星、地球、火星、木星、土星、天王星、海王星&#x3C;del&#x3E;、冥王星&#x3C;/del&#x3E;。</code></pre>
+        </div>
 
         <h2>Mark，高亮标记</h2>
 
