@@ -20,6 +20,15 @@
         table h1, table h2, table h3, table h4, table h5, table h6 {
             margin: 0;
         }
+
+        .cui-demo-example h1,
+        .cui-demo-example h2,
+        .cui-demo-example h3,
+        .cui-demo-example h4,
+        .cui-demo-example h5,
+        .cui-demo-example h6 {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -363,16 +372,84 @@
         </div>
 
         <h2>Mark，高亮标记</h2>
+        <p><code>&#x3C;mark&#x3E;</code>元素使用黄色背景高亮需要标记的文本，仅为样式上的强调。</p>
+        <div class="cui-demo-example">
+            <p>字符串字面量、正则表达式对象字面量、变量名支持使用<mark>\u加四位十六进制数值</mark>来表示UTF-16 编码的字符，比如：\u0061表示英文字母小写a。</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>字符串字面量、正则表达式对象字面量、变量名支持使用&#x3C;mark&#x3E;\u加四位十六进制数值&#x3C;/mark&#x3E;来表示UTF-16 编码的字符，比如：\u0061表示英文字母小写a。</code></pre>
+        </div>
 
         <h2>小号文本</h2>
+        <p>
+            语义、重要性降低的文本，使用<code>&#x3C;small&#x3E;</code>元素，其内的文本为父容器字体大小的85%，也就是0.85em。<br/>
+            对于标题元素中嵌套的<code>&#x3C;small&#x3E;</code>元素的字体大小为，<code>&#x3C;h1~h3&#x3E;</code>为65%，<code>&#x3C;h4~h6&#x3E;</code>为75%。
+        </p>
+        <p>
+            另外，可以使用<code>&#x3C;.small&#x3E;</code>类来代替<code>&#x3C;small&#x3E;</code>元素。
+        </p>
+        <div class="cui-demo-example">
+            <p><small>Javascript 引擎总会尝试把源码转成UTF-16 编码的文本。</small></p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;small&#x3E;Javascript 引擎总会尝试把源码转成UTF-16 编码的文本。&#x3C;/small&#x3E;</code></pre>
+        </div>
 
         <h2>缩略语</h2>
+        <p>缩略语使用<code>&#x3C;abbr&#x3E;</code>元素来包裹，<code>title</code>属性记录完整内容，鼠标悬停在缩写和缩写词上时就会显示完整内容。</p>
+        <p>样式为较浅的虚线下划线，鼠标移至上面会变成带有“问好”指针。</p>
+        <div class="cui-demo-example">
+            <p><abbr title="Supplementary Planes">SMP</abbr>中的码位，在UTF-16中被编码为一对16比特长的码元（即32bit,4Bytes），称作代理对（surrogate pair）。</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;abbr title="Supplementary Planes"&#x3E;SMP&#x3C;/abbr&#x3E;</code></pre>
+        </div>
 
         <h2>发言、技术词汇</h2>
+        <p>在西文中，多使用<code>&#x3C;i&#x3E;</code>来包裹技术词汇，或者可以将这个元素理解为将包裹的字体应用<em>斜体</em>样式。</p>
+        <p><code>font-style</code>使用衬线、楷体的字体回退顺序。</p>
+        <div class="cui-demo-example">
+            <p><i>Unicode</i> 以平面为单位定义<i>字符</i>，每个平面可以存放65536个（两个字节长度，2的16次方）字符。目前，一共有17个平面（2的5次方），即Unicode 字符集当前包含有2的21 次方个字符。</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;i&#x3E;Unicode&#x3C;/i&#x3E; 以平面为单位定义&#x3C;i&#x3E;字符&#x3C;/i&#x3E;，每个平面可以存放65536个（两个字节长度，2的16次方）字符。目前，一共有17个平面（2的5次方），即Unicode 字符集当前包含有2的21 次方个字符。</code></pre>
+        </div>
 
         <h2>变量名</h2>
+        <p>标记变量名使用<code>&#x3C;var&#x3E;</code>，多用于公式以及程序代码。</p>
+        <p><code>font-style</code>使用衬线、楷体的字体回退顺序。</p>
+        <div class="cui-demo-example">
+            <p><var>y</var> = 2<var>x</var> + 520</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;var&#x3E;y&#x3C;/var&#x3E; = 2&#x3C;var&#x3E;x&#x3C;/var&#x3E; + 520</code></pre>
+        </div>
 
         <h2>分割线</h2>
+        <p>分割线<code>&#x3C;hr&#x3E;</code>，块级元素。</p>
+        <p>上下添加约20px 的<code>margin</code>。</p>
+        <div class="cui-demo-example">
+            <hr>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;hr&#x3E;</code></pre>
+        </div>
+
+        <h2>上下标</h2>
+        <p>上标文本使用<code>&#x3C;sup&#x3E;</code>，下标文本使用<code>&#x3C;sub&#x3E;</code>。</p>
+        <p>文字字体的大小为父元素字体大小的75%。</p>
+        <div class="cui-demo-example">
+            <p>从这三个角度看Javascript 与字符编码的关系：</p>
+            <p><sup>1</sup>对Javascript 文件解码时；</p>
+            <p><small>2</small>Javascript 引擎解析源码时；</p>
+            <p><sub>3</sub>代码运行时Javascript 语言本身的行为；</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>从这三个角度看Javascript 与字符编码的关系：
+&#x3C;sup&#x3E;1&#x3C;/sup&#x3E;对Javascript 文件解码时；
+&#x3C;small&#x3E;2&#x3C;/small&#x3E;Javascript 引擎解析源码时；
+&#x3C;sub&#x3E;3&#x3C;/sub&#x3E;代码运行时Javascript 语言本身的行为；</code></pre>
+        </div>
       
         <h2>引用块</h2>
 
