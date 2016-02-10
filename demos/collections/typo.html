@@ -173,9 +173,9 @@
             &#x3C;p&#x3E;...&#x3C;/p&#x3E;
         </div>
 
-		<h2>列表</h2>
+        <!--<h2>列表</h2>
 
-		<h2>表格</h2>
+        <h2>表格</h2>-->
 
         <h2>地址信息</h2>
         <p>
@@ -343,7 +343,7 @@
             <p>
                 提示：「注记u元素」虽有明确的样式，用于避免文字上的争议，但并不改变文本的本来意义，常有表示专名（中文专名号）或原、引文的拼写错误等用途；而「增订ins元素」表示相应文本在版本修改、增订间的记录。
             </p>
-            <cite lang="zh"><a href="https://css.hanzi.co/manual/yangshi_biaozhunhua#wenzi_zhuangshixian" title="注记与增订元素"> 《漢字標準格式》</a></cite>
+            <footer lang="zh"><a href="https://css.hanzi.co/manual/yangshi_biaozhunhua#wenzi_zhuangshixian" title="注记与增订元素"> 《漢字標準格式》</a></footer>
         </blockquote>
 
         <div class="cui-demo-example">
@@ -452,10 +452,152 @@
         </div>
       
         <h2>引用块</h2>
+        <p>引用其他来源的内容,使用<code>&#x3C;blockquote&#x3E;</code>元素,该元素是块元素,对于行内的引用,建议使用<code>&#x3C;q&#x3E;</code>.</p>
+        <p>样式上主要添加了文本缩进以及左边框.</p>
+        <p>来源的名称可以通过<code>&#x3C;footer&#x3E;或&#x3C;small&#x3E;</code>来包裹.</p>
+        <div class="cui-demo-example">
+            <blockquote>
+                <p>
+                    Javascript 源码解析支持UTF-16 编码，
+                    但由于在语言设计之初，没有考虑到SMP 字符的出现，也就是认为每个字符都一定能用一个Code Unit 来表示，没想到SMP 字符需要利用代理码对，也就是要用两个Code Unit 来表示一个字符。
+                    而语言本身的这个特性会造成在处理包含SMP 字符的字符串时出现非预期结果，比如，字符“🐄” 的UTF-16 编码是：OxD83D OxDC04，对应就会有两个Code Unit，理想中的结果是这个字符长度等于1，
+                    但实际上，Javascript 会认为长度等于2，因为有两个Code Unit。
+                </p>
+                <footer>
+                    <a href="https://github.com/SamHwang1990/blog/issues/2" title="Javascript 与字符编码">Javascript 与字符编码</a>
+                </footer>
+            </blockquote>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;blockquote&#x3E;
+    &#x3C;p&#x3E;
+        Javascript 源码解析支持UTF-16 编码，
+        但由于在语言设计之初，没有考虑到SMP 字符的出现，也就是认为每个字符都一定能用一个Code Unit 来表示，没想到SMP 字符需要利用代理码对，也就是要用两个Code Unit 来表示一个字符。
+        而语言本身的这个特性会造成在处理包含SMP 字符的字符串时出现非预期结果，比如，字符“🐄” 的UTF-16 编码是：OxD83D OxDC04，对应就会有两个Code Unit，理想中的结果是这个字符长度等于1，
+        但实际上，Javascript 会认为长度等于2，因为有两个Code Unit。
+    &#x3C;/p&#x3E;
+    &#x3C;footer&#x3E;
+        &#x3C;a href="https://github.com/SamHwang1990/blog/issues/2" title="Javascript 与字符编码"&#x3E;Javascript 与字符编码&#x3C;/a&#x3E;
+    &#x3C;/footer&#x3E;
+&#x3C;/blockquote&#x3E;</code></pre>
+        </div>
 
-        <h2>代码</h2>
+        <p>另外,也可以通过添加类<code>.blockquote-reverse</code>或<code>.pull-right</code>来实现右对齐的效果.</p>
+        <div class="cui-demo-example">
+            <blockquote class="blockquote-reverse">
+                <p>
+                    Javascript 提供两个方法来对URL 中的字符进行编码，分别是：<code>encodeURI()</code>、<code>encodeURIComponent()</code>。
+                </p>
+                <footer>
+                    <a href="https://github.com/SamHwang1990/blog/issues/2" title="Javascript 与字符编码">Javascript 与字符编码</a>
+                </footer>
+            </blockquote>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;blockquote class="blockquote-reverse"&#x3E;
+    &#x3C;p&#x3E;
+    Javascript 提供两个方法来对URL 中的字符进行编码，分别是：encodeURI()、encodeURIComponent()。
+    &#x3C;/p&#x3E;
+    &#x3C;footer&#x3E;
+        &#x3C;a href="https://github.com/SamHwang1990/blog/issues/2" title="Javascript 与字符编码"&#x3E;Javascript 与字符编码&#x3C;/a&#x3E;
+    &#x3C;/footer&#x3E;
+&#x3C;/blockquote&#x3E;</code></pre>
+        </div>
+
+        <h2>计算机相关文本</h2>
+        <p>计算机相关文本多使用如下元素包裹:行内代码<code>&#x3C;code&#x3E;</code>、键盘输入键<code>&#x3C;kbd&#x3E;</code>、计算机输出示例<code>&#x3C;samp&#x3E;</code>及块级格式预处理<code>&#x3C;pre&#x3E;</code>等元素.</p>
+        <p><code>font-style</code>使用等宽字体、黑体、非衬线的字体回退顺序。</p>
+        <div class="cui-demo-example">
+            <h3>行内代码</h3>
+            <p><code>String.prototype.codePointAt(position)</code>返回字符串中指定位置的Unicode Code Point，返回结果是十进制的整数，该方法将SMP 字符的代理码对视为单一字符.</p>
+
+            <h3>键盘输入键</h3>
+            <p>使用<kbd>command + Q</kbd>退出程序!</p>
+
+            <h3>计算机输出示例</h3>
+            <p>我的电脑说,你的家在:<samp>/Users/sam</samp></p>
+
+            <h4>块级格式预处理</h4>
+            <pre><code>&#x3C;abbr title="Supplementary Planes"&#x3E;SMP&#x3C;/abbr&#x3E;</code></pre>
+
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;code&#x3E;String.prototype.codePointAt(position)&#x3C;/code&#x3E;
+
+使用&#x3C;kbd&#x3E;command + Q&#x3C;/kbd&#x3E;退出程序!
+
+我的电脑说,你的家在:&#x3C;samp&#x3E;/Users/sam&#x3C;/samp&#x3E;
+
+&#x3C;pre&#x3E;&#x3C;code&#x3E;&#x3C;abbr title="Supplementary Planes"&#x3E;SMP&#x3C;/abbr&#x3E;&#x3C;/code&#x3E;&#x3C;/pre&#x3E;
+            </code></pre>
+        </div>
+
+        <h2>文章排版</h2>
+        <p>
+            针对文章的排版,CUI 提供一个包裹类<code>.article</code>,该类之下的部分元素样式会有所不同,比如:
+        </p>
+        <ul>
+            <li>文本行高变为:<code>1.7</code>.</li>
+            <li><code>&#x3C;strong&#x3E;</code>字体回退顺序变为非衬线、黑体.</li>
+        </ul>
+        <div class="cui-demo-example">
+            <article class="article">
+                <p>我的行高是1.7 哦!</p>
+                <p><strong>字符编码对每个程序员来说，都应该是必须了解的</strong></p>
+                <blockquote>
+                    <p>
+                        Javascript 提供两个方法来对URL 中的字符进行编码，分别是：<code>encodeURI()</code>、<code>encodeURIComponent()</code>。
+                    </p>
+                    <footer>
+                        <a href="https://github.com/SamHwang1990/blog/issues/2" title="Javascript 与字符编码">Javascript 与字符编码</a>
+                    </footer>
+                </blockquote>
+            </article>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;p&#x3E;我的行高是1.7 哦!&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#x3C;strong&#x3E;字符编码对每个程序员来说，都应该是必须了解的&#x3C;/strong&#x3E;&#x3C;/p&#x3E;
+&#x3C;blockquote&#x3E;
+    &#x3C;p&#x3E;
+        Javascript 提供两个方法来对URL 中的字符进行编码，分别是：&#x3C;code&#x3E;encodeURI()&#x3C;/code&#x3E;、&#x3C;code&#x3E;encodeURIComponent()&#x3C;/code&#x3E;。
+    &#x3C;/p&#x3E;
+    &#x3C;footer&#x3E;
+        &#x3C;a href="https://github.com/SamHwang1990/blog/issues/2" title="Javascript 与字符编码"&#x3E;Javascript 与字符编码&#x3C;/a&#x3E;
+    &#x3C;/footer&#x3E;
+&#x3C;/blockquote&#x3E;</code></pre>
+        </div>
+
 
         <h2>排版辅助Class</h2>
+        <p>CUI 提供两种类型的辅助类,一种用来改变文本对齐方式,另一种用来改变文本大小写.</p>
+        <div class="cui-demo-example">
+            <h3>更改对齐方式</h3>
+            <p class="text-left">Left aligned text.</p>
+            <p class="text-center">Center aligned text.</p>
+            <p class="text-right">Right aligned text.</p>
+            <p class="text-justify">Justified text.</p>
+            <p class="text-nowrap">No wrap text.</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;p class="text-left"&#x3E;Left aligned text.&#x3C;/p&#x3E;
+&#x3C;p class="text-center"&#x3E;Center aligned text.&#x3C;/p&#x3E;
+&#x3C;p class="text-right"&#x3E;Right aligned text.&#x3C;/p&#x3E;
+&#x3C;p class="text-justify"&#x3E;Justified text.&#x3C;/p&#x3E;
+&#x3C;p class="text-nowrap"&#x3E;No wrap text.&#x3C;/p&#x3E;</code></pre>
+        </div>
+
+        <div class="cui-demo-example">
+            <h3>更改大小写</h3>
+            <p class="text-lowercase">Lowercased text.</p>
+            <p class="text-uppercase">Uppercased text.</p>
+            <p class="text-capitalize">Capitalized text.</p>
+        </div>
+        <div class="cui-demo-highlight">
+            <pre><code>&#x3C;p class="text-lowercase"&#x3E;Lowercased text.&#x3C;/p&#x3E;
+&#x3C;p class="text-uppercase"&#x3E;Uppercased text.&#x3C;/p&#x3E;
+&#x3C;p class="text-capitalize"&#x3E;Capitalized text.&#x3C;/p&#x3E;</code></pre>
+        </div>
+
 
 	</div>
 </body>

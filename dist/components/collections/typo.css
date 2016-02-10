@@ -297,7 +297,7 @@ blockquote .small {
 blockquote footer:before,
 blockquote small:before,
 blockquote .small:before {
-  content: '\2014 00A0';
+  content: '\2014 \00A0';
 }
 blockquote blockquote {
   padding: 0 0 0 10px;
@@ -325,7 +325,7 @@ blockquote.pull-right footer:after,
 blockquote.pull-right small:after,
 .blockquote-reverse .small:after,
 blockquote.pull-right .small:after {
-  content: '\2014 00A0';
+  content: '\2014 \00A0';
 }
 code,
 kbd {
